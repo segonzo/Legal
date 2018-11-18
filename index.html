@@ -7,13 +7,72 @@
   <body>
     <h1>Hello World!</h1>
     <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    
 
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
     </script>
   </body>
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <style>
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgb(255, 255, 255);
+  }
+  
+  li {
+      float: left;
+      border-right:1px solid #bbb;
+  }
+  
+  li:last-child {
+      border-right: none;
+  }
+  
+  li a {
+      display: block;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+      background-color: #baccfc;
+  }
+  
+  .active {
+      background-color: #baccfc;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <ul>
+    <li><a class="active" href="#Case Info">Case Info</a></li>
+    <li><a href="#contacts">Contacts</a></li>
+    <li><a href="#correspondence">Correspondence</a></li>
+    <li><a href="#Depositions">Depositions</a></li>
+    <li><a href="#Discovery">Discovery</a></li>
+    <li><a href="#Documents">Documents</a></li>
+    <li><a href="#Expenses">Expenses</a></li>
+    <li><a href="#Liens">Liens</a></li>
+    <li><a href="#Mediation">Mediation</a></li>
+    <li><a href="#Medical">Medical</a></li>
+    <li><a href="#Notes">Notes</a></li>
+    <li><a href="#Settlement Calculator">Settlement Calculator</a></li>
+    <li style="float:right"><a href="#about">About</a></li>
+  </ul>
+  
+  </body>
+  </html>
+  
 </html>
+
