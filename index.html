@@ -25,7 +25,7 @@
     /* Style the top navigation bar */
     .topnav {
         overflow: hidden;
-        background-color: #ce2d18;
+        background-color: hsla(192, 100%, 17%, 0.63);
     }
     
     /* Style the topnav links */
@@ -41,8 +41,8 @@
     
     /* Change color on hover */
     .topnav a:hover {
-        background-color: #ddd;
-        color: black;
+        background-color: rgba(0, 68, 100, 0.486);
+        color: rgb(255, 255, 255);
     }
     
     /* Create two equal columns that floats next to each other */
@@ -76,7 +76,7 @@
             input[type=text] {
                 width: 100%;
                 box-sizing: border-box;
-                border: 2px solid #ce2d18;
+                border: 2px solid #1177bb;
                 border-radius: 4px;
                 font: times new roman;
                 font-size: 20px;
@@ -95,8 +95,7 @@
               <input type="text" name="search" placeholder="Search..">
             </form>
             </body>
-      <p>Business Business Business</p>
-    </div>
+     </div>
     
     <div class="topnav">
 
@@ -107,11 +106,12 @@
             <a href="page5.html" target="_self"> Discovery</a>
             <a href="page6.html" target="_self"> Documents</a>
             <a href="page7.html" target="_self"> Expenses</a>
-            <a href="page8.html" target="_self"> Liens</a>
-            <a href="page9.html" target="_self"> Mediation</a>
-            <a href="page10.html" target="_self"> Medical</a>
-            <a href="page11.html" target="_self"> Notes</a>
-            <a href="page12.html" target="_self"> Settlement Calculator</a>
+            <a href="page8.html" target="_self"> Insurance</a>
+            <a href="page9.html" target="_self"> Liens</a>
+            <a href="page10.html" target="_self"> Mediation</a>
+            <a href="page11.html" target="_self"> Medical</a>
+            <a href="page12.html" target="_self"> Notes</a>
+            <a href="page13.html" target="_self"> Settlement Calculator</a>
     </div>
     
     <div class="row">
@@ -137,14 +137,15 @@
                     
                     .container {
                         border-radius: 5px;
-                        background-color: white;
+                        background-color: hsl(0, 0%, 100%);
                         padding: 20px;
                     }
                     
                     .col-25 {
                         float: left;
-                        width: 20%;
+                        width: 15%;
                         margin-top: 6px;
+                        margin-right: 15px;
                     }
                     
                     .col-50 {
@@ -158,6 +159,7 @@
                         float: left;
                         width: 75%;
                         margin-top: 6px;
+                        margin-right: 15px;
                     }
                     
                     /* Clear floats after the columns */
@@ -302,20 +304,207 @@
                             </form>
                     </div>               
                     </body>
+    </div>
 
-    
+    <div class="row">
+    <div class="column">
+    <head>
+    <style>
+           * {
+                              box-sizing: border-box;
+                          }
+                          
+                          input[type=text], select, textarea {
+                              width: 100%;
+                              padding: 4px;
+                              border: 1px solid #ccc;
+                              border-radius: 4px;
+                              resize: vertical;
+                          }
+                          
+                          label {
+                              padding: 4px 4px 4px 0;
+                              display: inline-block;
+                          }
+                          
+                          .container {
+                              border-radius: 5px;
+                              background-color: hsl(0, 0%, 100%);
+                              padding: 20px;
+                          }
+                          
+                          .col-25 {
+                              float: left;
+                              width: 13%;
+                              margin-top: 6px;
+                          }
+                          .col-30 {
+                              float: left;
+                              width: 6%;
+                              margin-top: 6px;
+                          }
+                          .col-50 {
+                              float: left;
+                              width: 19%;
+                              margin-top: 6px;
+                              margin-right: 15px;
+                          }
+                          .col-75 {
+                              float: left;
+                              width: 75%;
+                              margin-top: 6px;
+                          }
+                          
+                          /* Clear floats after the columns */
+                          .row:after {
+                              content: "";
+                              display: table;
+                              clear: both;
+                          }
+                          
+                          /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+                          @media screen and (max-width: 600px) {
+                              .col-25, .col-75, input[type=submit] {
+                                  width: 100%;
+                                  margin-top: 0;
+                              }
+                          }
+                          </style>
+                          </head>
+                          <body>
+                          
+        <div class="container">
+        <form action="/action_page.php">
+        <div class="row">
+        <div class="col-25">
+        <label for="hphone">Home Phone</label>
+        </div>
+                <div class="col-75">
+                <input type="text" id="hphone" name="hphone" placeholder="(xxx)xxx-xxxx">
+                </div>
+                </div>
+      
+        <div class="row">
+        <div class="col-25">
+        <label for="cphone">Cell Phone</label>
+        </div>
+                <div class="col-75">
+                <input type="text" id="cphone" name="cphone" placeholder="(xxx)xxx-xxxx">
+                </div>
+                </div>
+                             
+        <div class="row">
+        <div class="col-25">
+        <label for="DOB">DOB</label>
+        </div>
+                <div class="col-50">
+                <input type="text" id="DOB" name="DOB" placeholder="00/00/0000">
+                </div>
+                                
+        <div class="row">
+        <div class="col-30">
+        <label for="DOD">DOD</label>
+        </div>
+                <div class="col-50">
+                <input type="text" id="DOD" name="DOD" placeholder="00/00/0000">
+                </div>  
+                                          
+        <div class="row">
+        <div class="col-30">
+        <label for="SSN">SSN</label>
+        </div>
+                <div class="col-50">
+                <input type="text" id="SSN" name="SSN" placeholder="xxx-xx-xxxx">
+                </div>     
+                                            
+        <div class="row">
+        <div class="col-25">
+        <label for="DOB">DOA</label>
+        </div>
+                <div class="col-50">
+                <input type="text" id="DOA" name="DOA" placeholder="00/00/0000">
+                </div>
+                                              
+        <div class="row">
+        <div class="col-30">
+        <label for="SOL">SOL</label>
+        </div>
+                <div class="col-50">
+                <input type="text" id="SOL" name="SOL" placeholder="00/00/0000">
+                </div>  
+                                                        
+        <div class="row">
+        <div class="col-30">
+        <label for="DOR">DOR</label>
+        </div>
+                <div class="col-50">
+                <input type="text" id="DOR" name="DOR" placeholder="00/00/0000">
+                </div>             
+                                              
+        <div class="row">
+        <div class="col-25">
+        <label for="Atty">Attorney 1</label>
+        </div>
+                <div class="col-75">
+                <select id="Atty" name="Atty" aria-placeholder="Attorney">
+                <option value="blank"></option>
+                <option value="Atty">Atty 1</option>
+                <option value="Atty">Atty 2</option>
+                <option value="Atty">Atty 3</option>
+                </select>
+                </div>
+                </div>
+
+
+        <div class="row">
+        <div class="col-25">
+        <label for="Atty">Attorney 2</label>
+        </div>
+                <div class="col-75">
+                <select id="Atty" name="Atty" aria-placeholder="Attorney">
+                <option value="blank"></option>
+                <option value="Atty">Atty 1</option>
+                <option value="Atty">Atty 2</option>
+                <option value="Atty">Atty 3</option>
+                </select>
+                </div>
+                </div>
+
+        <div class="row">
+        <div class="col-25">
+        <label for="Plgl">Paralegal 1</label>
+        </div>
+                <div class="col-75">
+                <select id="Plgl" name="Plgl" aria-placeholder="Attorney">
+                <option value="blank"></option>
+                <option value="Atty">Paralegal 1</option>
+                <option value="Atty">Paralegal 2</option>
+                <option value="Atty">Paralegal 3</option>
+                </select>
+                </div>
+                </div>
+
+        <div class="row">
+        <div class="col-25">
+        <label for="Plgl">Paralegal 2</label>
+        </div>
+                <div class="col-75">
+                <select id="Plgl" name="Plgl" aria-placeholder="Attorney">
+                <option value="blank"></option>
+                <option value="Atty">Paralegal 1</option>
+                <option value="Atty">Paralegal 2</option>
+                <option value="Atty">Paralegal 3</option>
+                </select>
+                </div>
+                </div>
+
+                </div>  
+    </head>
+                            
+                                                                      
     </div>
-      <div class="column">
-        <h2>Column</h2>
-       </div>
-    </div>
-    
     </body>
     </html>
-    
-
-
-
 
 
 
