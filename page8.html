@@ -41,7 +41,7 @@
     
     /* Change color on hover */
     .topnav a:hover {
-        background-color: rgba(0, 68, 100, 0.486);
+        background-color: #0044647c;
         color: rgb(255, 255, 255);
     }
     
@@ -165,10 +165,40 @@ tr:nth-child(even) {
             <td></td>
             <td></td>
             <td>
-                <input type="text" id="policy" name="policy" placeholder="" style="width:125px; height:30px; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
+                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
             </td>
             <td>
-                <input type="text" id="claim" name="claim" placeholder="" style="width:125px; height:30px; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
+                <input type="text" id="claim" name="claim" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
+            </td>
+            <td>
+                <select id="status" name="status" style="width:125px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                    <option value="blank"></option>
+                    <option value="Accepted">Accepted</option>
+                    <option value="Denied">Denied</option>
+                    <option value="Disputed">Disputed</option>
+                    <option value="NoCov">No Coverage</option>
+                    <option value="Pending">Pending</option>
+                </select>
+            </td>
+    </tr>
+    <tr>
+            <td>
+                    <select id="type" name="type" style="width:250px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                            <option value="blank"></option>
+                            <option value="1P">UM/UIM</option>
+                            <option value="1P">PIP</option>
+                            <option value="1P">MedPay</option>
+                            <option value="3P">3P</option>
+                        </select>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
+
+            </td>
+            <td>
+                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
             </td>
             <td>
                 <select id="status" name="status" style="width:125px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
@@ -193,8 +223,12 @@ tr:nth-child(even) {
             </td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>
+                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
+            </td>
+            <td>
+                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
+            </td>
             <td>
                 <select id="status" name="status" style="width:125px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
                     <option value="blank"></option>
@@ -218,33 +252,12 @@ tr:nth-child(even) {
             </td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
             <td>
-                <select id="status" name="status" style="width:125px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
-                    <option value="blank"></option>
-                    <option value="Accepted">Accepted</option>
-                    <option value="Denied">Denied</option>
-                    <option value="Disputed">Disputed</option>
-                    <option value="NoCov">No Coverage</option>
-                    <option value="Pending">Pending</option>
-                </select>
+                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
             </td>
-    </tr>
-    <tr>
             <td>
-                    <select id="type" name="type" style="width:250px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
-                            <option value="blank"></option>
-                            <option value="1P">UM/UIM</option>
-                            <option value="1P">PIP</option>
-                            <option value="1P">MedPay</option>
-                            <option value="3P">3P</option>
-                        </select>
+                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
             </td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
             <td>
                 <select id="status" name="status" style="width:125px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
                     <option value="blank"></option>
