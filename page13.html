@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LAYOUT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+  </head>
+
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+    }
+    
+    /* Style the header */
+    .header {
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    /* Style the top navigation bar */
+    .topnav {
+        overflow: hidden;
+        background-color: hsla(192, 100%, 17%, 0.63);
+    }
+    
+    /* Style the topnav links */
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        font-family: 'Times New Roman', Times, serif
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    /* Change color on hover */
+    .topnav a:hover {
+        background-color: rgba(0, 68, 100, 0.486);
+        color: rgb(255, 255, 255);
+    }
+    
+    /* Create two equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 50%;
+        padding: 15px;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width:600px) {
+        .column {
+            width: 100%;
+        }
+    }
+    </style>
+    </head>
+
+    <body>
+    
+    <div class="header">
+          <head>
+            <style>
+            input[type=text] {
+                width: 100%;
+                box-sizing: border-box;
+                border: 2px solid #1177bb;
+                border-radius: 4px;
+                font: times new roman;
+                font-size: 20px;
+                background-color: white;
+                color: #000000;
+                background-image: url('searchicon.png');
+                background-position: 10px 10px; 
+                background-repeat: no-repeat;
+                padding: 12px 20px 12px 40px;
+            }
+            </style>
+            </head>
+            <body>
+            
+            <form>
+              <input type="text" name="search" placeholder="Search..">
+            </form>
+            </body>
+     </div>
+    
+    <div class="topnav">
+
+            <a href="index.html" target="_self"> Case</a>
+            <a href="page2.html" target="_self"> Contacts</a>
+            <a href="page3.html" target="_self"> Correspondence</a>
+            <a href="page4.html" target="_self"> Depositions</a>
+            <a href="page5.html" target="_self"> Discovery</a>
+            <a href="page6.html" target="_self"> Documents</a>
+            <a href="page7.html" target="_self"> Expenses</a>
+            <a href="page8.html" target="_self"> Insurance</a>
+            <a href="page9.html" target="_self"> Liens</a>
+            <a href="page10.html" target="_self"> Mediation</a>
+            <a href="page11.html" target="_self"> Medical</a>
+            <a href="page12.html" target="_self"> Notes</a>
+            <a href="page13.html" target="_self"> Settlement Calculator</a>
+    </div>
