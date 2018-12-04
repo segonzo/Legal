@@ -144,6 +144,7 @@ tr:nth-child(even) {
     <th>Insurance</th>
     <th>Policy Number</th>
     <th>Claim Number</th>
+    <th>Limits</th>
     <th>Liability</th>
 
     </tr>
@@ -169,6 +170,20 @@ tr:nth-child(even) {
             <td>
                 <select id="status" name="status" style="width:125px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
                     <option value="blank"></option>
+                    <option value="">$2,500.00</option>
+                    <option value="">$5,000.00</option>
+                    <option value="">$10,000.00</option>
+                    <option value="">$30,000.00</option>
+                    <option value="">$60,000.00</option>
+                    <option value="">$50,000.00</option>
+                    <option value="">$100,000.00</option>
+                    <option value="">$300,000.00</option>
+                    <option value="">unknown</option>
+                </select> 
+            </td>
+            <td>
+                <select id="status" name="status" style="width:125px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                    <option value="blank"></option>
                     <option value="Accepted">Accepted</option>
                     <option value="Denied">Denied</option>
                     <option value="Disputed">Disputed</option>
@@ -200,32 +215,16 @@ tr:nth-child(even) {
             <td>
                 <select id="status" name="status" style="width:125px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
                     <option value="blank"></option>
-                    <option value="Accepted">Accepted</option>
-                    <option value="Denied">Denied</option>
-                    <option value="Disputed">Disputed</option>
-                    <option value="NoCov">No Coverage</option>
-                    <option value="Pending">Pending</option>
-                </select>
-            </td>
-    </tr>
-    <tr>
-            <td><input type="checkbox" name="chk"></td>
-            <td>
-                    <select id="type" name="type" style="width:200px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
-                            <option value="blank"></option>
-                            <option value="1P">UM/UIM</option>
-                            <option value="1P">PIP</option>
-                            <option value="1P">MedPay</option>
-                            <option value="3P">3P</option>
-                        </select>
-            </td>
-            <td></td>
-            <td></td>
-            <td>
-                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
-            </td>
-            <td>
-                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
+                    <option value="">$2,500.00</option>
+                    <option value="">$5,000.00</option>
+                    <option value="">$10,000.00</option>
+                    <option value="">$30,000.00</option>
+                    <option value="">$60,000.00</option>
+                    <option value="">$50,000.00</option>
+                    <option value="">$100,000.00</option>
+                    <option value="">$300,000.00</option>
+                    <option value="">unknown</option>
+                </select> 
             </td>
             <td>
                 <select id="status" name="status" style="width:125px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
@@ -256,6 +255,64 @@ tr:nth-child(even) {
             </td>
             <td>
                 <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
+            </td>
+            <td>
+                <select id="status" name="status" style="width:125px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                    <option value="blank"></option>
+                    <option value="">$2,500.00</option>
+                    <option value="">$5,000.00</option>
+                    <option value="">$10,000.00</option>
+                    <option value="">$30,000.00</option>
+                    <option value="">$60,000.00</option>
+                    <option value="">$50,000.00</option>
+                    <option value="">$100,000.00</option>
+                    <option value="">$300,000.00</option>
+                    <option value="">unknown</option>
+                    </select> 
+            </td>
+            <td>
+                <select id="status" name="status" style="width:125px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                    <option value="blank"></option>
+                    <option value="Accepted">Accepted</option>
+                    <option value="Denied">Denied</option>
+                    <option value="Disputed">Disputed</option>
+                    <option value="NoCov">No Coverage</option>
+                    <option value="Pending">Pending</option>
+                </select>
+            </td>
+    </tr>
+    <tr>
+            <td><input type="checkbox" name="chk"></td>
+            <td>
+                    <select id="type" name="type" style="width:200px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                            <option value="blank"></option>
+                            <option value="1P">UM/UIM</option>
+                            <option value="1P">PIP</option>
+                            <option value="1P">MedPay</option>
+                            <option value="3P">3P</option>
+                        </select>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
+            </td>
+            <td>
+                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
+            </td>
+            <td>
+                <select id="status" name="status" style="width:125px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                    <option value="blank"></option>
+                    <option value="">$2,500.00</option>
+                    <option value="">$5,000.00</option>
+                    <option value="">$10,000.00</option>
+                    <option value="">$30,000.00</option>
+                    <option value="">$60,000.00</option>
+                    <option value="">$50,000.00</option>
+                    <option value="">$100,000.00</option>
+                    <option value="">$300,000.00</option>
+                    <option value="">unknown</option>
+                </select> 
             </td>
             <td>
                 <select id="status" name="status" style="width:125px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
