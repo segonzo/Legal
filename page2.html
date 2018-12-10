@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>LAYOUT</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
   </head>
@@ -66,140 +65,347 @@
         }
     }
     </style>
-    <body>
-    <div class="header">
-          <head>
-            <style>
-            input[type=text] {
-                width: 50%;
-                box-sizing: border-box;
-                border: 2px solid #001e25cb;
-                border-radius: 4px;
-                font: times new roman;
-                font-size: 20px;
-                background-color: white;
-                color: #000000;
-                background-image: url('searchicon.png');
-                background-position: 10px 10px; 
-                background-repeat: no-repeat;
-                padding: 12px 20px 12px 40px;
-            }
-            </style>
-            </head>
-            <body>
-            
-            <form>
-              <input type="text" name="search" placeholder="Search..">
-            </form>
-            </body>
-     </div>
+                        <body>
+                        <div class="header">
+                        <head>
+                        <style>
+                        input[type=text] {
+                        width: 50%;
+                        box-sizing: border-box;
+                        border: 2px solid #001e25cb;
+                        border-radius: 4px;
+                        font: times new roman;
+                        font-size: 20px;
+                        background-color: white;
+                        color: #000000;
+                        background-image: url('searchicon.png');
+                        background-position: 10px 10px; 
+                        background-repeat: no-repeat;
+                        padding: 12px 20px 12px 40px;
+                        }
+                        </style>
+                        </head>
+                        
+                        <body>
+                        <form>
+                        <input type="text" name="search" placeholder="Search..">
+                        </form>
+                        </body>
+                        </div>
     
-    <div class="topnav">
+                        <div class="topnav">
+                        <a href="index.html" target="_self"> Case</a>
+                        <a href="page2.html" target="_self"> Contacts</a>
+                        <a href="page3.html" target="_self"> Correspondence</a>
+                        <a href="page4.html" target="_self"> Depositions</a>
+                        <a href="page5.html" target="_self"> Discovery</a>
+                        <a href="page6.html" target="_self"> Documents</a>
+                        <a href="page7.html" target="_self"> Expenses</a>
+                        <a href="page8.html" target="_self"> Insurance</a>
+                        <a href="page9.html" target="_self"> Liens</a>
+                        <a href="page10.html" target="_self"> Mediation</a>
+                        <a href="page11.html" target="_self"> Medical</a>
+                        <a href="page12.html" target="_self"> Notes</a>
+                        <a href="page13.html" target="_self"> Settlement Calculator</a>
+                        </div>
 
-            <a href="index.html" target="_self"> Case</a>
-            <a href="page2.html" target="_self"> Contacts</a>
-            <a href="page3.html" target="_self"> Correspondence</a>
-            <a href="page4.html" target="_self"> Depositions</a>
-            <a href="page5.html" target="_self"> Discovery</a>
-            <a href="page6.html" target="_self"> Documents</a>
-            <a href="page7.html" target="_self"> Expenses</a>
-            <a href="page8.html" target="_self"> Insurance</a>
-            <a href="page9.html" target="_self"> Liens</a>
-            <a href="page10.html" target="_self"> Mediation</a>
-            <a href="page11.html" target="_self"> Medical</a>
-            <a href="page12.html" target="_self"> Notes</a>
-            <a href="page13.html" target="_self"> Settlement Calculator</a>
-    </div>
-      
-    <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    .accordion {
-        background-color: #eee;
-        color: #444;
-        cursor: pointer;
-        padding: 18px;
-        width: 50%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
-        transition: 0.4s;
-    }
+                        <head>
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <style>
+                        .accordion {
+                        background-color: #eee;
+                        color: #444;
+                        cursor: pointer;
+                        padding: 18px;
+                        width: 50%;
+                        border: none;
+                        text-align: left;
+                        outline: none;
+                        font-size: 15px;
+                        transition: 0.4s;
+                        }
+                    
+                        .active, .accordion:hover {
+                        background-color: #ccc;
+                        }
+                    
+                        .panel {
+                        padding: 0 18px;
+                        background-color: white;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.2s ease-out;
+                        }
+                        </style>
+                        </head>
     
-    .active, .accordion:hover {
-        background-color: #ccc;
-    }
+                        <body>
+                        <h3>Contacts</h3>
+                        <input type="checkbox" name="chk">
+                        <button class="accordion" style="background-color:white; border: 1.5px solid #ddd; margin-bottom:10px; color:black; font-family:'Times New Roman', Times, serif; font-size: 16px">Person</button>
+                        <div class="panel">
+                                <p>First Name:</p>
+                                <p>Last Name:</p>
+                                <p>Role:</p>
+                                <p>Phone No.:</p>
+                                <p>Fax No.: </p>  
+                                <p>Company:</p>
+                                <p>Mailing Address:</p>
+                                <p>Language:</p>
+                                <p>Gender:</p>
+                        </div>
+                        <input type="checkbox" name="chk">
+                        <button class="accordion" style="background-color:white; border:1.5px solid #ddd; margin-bottom:10px; color:black; font-family:'Times New Roman', Times, serif; font-size: 16px">Person</button>
+                        <div class="panel">
+                                <p>First Name:</p>
+                                <p>Last Name:</p>
+                                <p>Role:</p>
+                                <p>Phone No.:</p>
+                                <p>Fax No.: </p>  
+                                <p>Company:</p>
+                                <p>Mailing Address:</p>
+                                <p>Language:</p>
+                                <p>Gender:</p>
+                        </div>
+                        <input type="checkbox" name="chk">
+                        <button class="accordion" style="background-color:white; border:1.5px solid #ddd; margin-bottom:10px; color:black; font-family:'Times New Roman', Times, serif; font-size: 16px">Person</button>
+                        <div class="panel">
+                                <P>First Name:</P>
+                                <p>Last Name:</p>
+                                <p>Role:</p>
+                                <p>Phone No.:</p>
+                                <p>Fax No.: </p>  
+                                <p>Company:</p>
+                                <p>Mailing Address:</p>
+                                <p>Language:</p>
+                                <p>Gender:</p>
+                        </div>
+                        
+        <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
     
-    .panel {
-        padding: 0 18px;
-        background-color: white;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-    }
-    </style>
-    </head>
-    <body>
-    
-    <h2>Contacts</h2>
-    <br>
-    <input type="checkbox" name="chk">
-    <button class="accordion" style="background-color:white; border: 1.5px solid #ddd; margin-bottom:10px; color:black; font-family:'Times New Roman', Times, serif; font-size: 16px">Person</button>
-    <div class="panel">
-            <p>First Name:</p>
-            <p>Last Name:</p>
-            <p>Role:</p>
-            <p>Phone No.:</p>
-            <p>Fax No.: </p>  
-            <p>Company:</p>
-            <p>Mailing Address:</p>
-            <p>Language:</p>
-            <p>Gender:</p>
-    </div>
-    <input type="checkbox" name="chk">
-    <button class="accordion" style="background-color:white; border:1.5px solid #ddd; margin-bottom:10px; color:black; font-family:'Times New Roman', Times, serif; font-size: 16px">Person</button>
-    <div class="panel">
-            <p>First Name:</p>
-            <p>Last Name:</p>
-            <p>Role:</p>
-            <p>Phone No.:</p>
-            <p>Fax No.: </p>  
-            <p>Company:</p>
-            <p>Mailing Address:</p>
-            <p>Language:</p>
-            <p>Gender:</p>
-    </div>
-    <input type="checkbox" name="chk">
-    <button class="accordion" style="background-color:white; border:1.5px solid #ddd; margin-bottom:10px; color:black; font-family:'Times New Roman', Times, serif; font-size: 16px">Person</button>
-    <div class="panel">
-            <p><form>First Name: <input type="text" style="width:150px; height:20px; border: 1px solid #775c5c; font-family:'Times New Roman', Times, serif; font-size: 16px"></form></p>
-            <p>Last Name:</p>
-            <p>Role:</p>
-            <p>Phone No.:</p>
-            <p>Fax No.: </p>  
-            <p>Company:</p>
-            <p>Mailing Address:</p>
-            <p>Language:</p>
-            <p>Gender:</p>
-    </div>
-    <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-    
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
         if (panel.style.maxHeight){
-          panel.style.maxHeight = null;
+        panel.style.maxHeight = null;
         } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
+        panel.style.maxHeight = panel.scrollHeight + "px";
         } 
-      });
+        });
+        }
+        </script></body>
+        </div>
+            
+    <style>
+    body {font-family: Times New Roman, Times, Serif; font-size:18px;}
+    * {box-sizing: border-box;}
+
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
     }
-    </script></body>
+
+    /* Add a background color when the inputs get focus */
+    input[type=text]:focus, input[type=password]:focus {
+    background-color: white;
+    outline: none;
+    }
+
+    /* Set a style for all buttons */
+    button {
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    }
+
+    button:hover {
+    opacity:1;
+    }
+
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+    padding: 14px 20px;
+    background-color:#001e25cb ;
+    }
+
+    /* Float cancel and signup buttons and add an equal width */
+    .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+    }
+
+    /* Add padding to container elements */
+    .container {
+    padding: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #001e25cb;
+    padding-top: 50px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    }
+
+    /* Style the horizontal ruler */
+    hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+        }
+            
+    /* The Close Button (x) */
+    .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+    }
+
+    .close:hover,
+    .close:focus {
+    color: white;
+    cursor: pointer;
+    }
+
+    /* Clear floats */
+    .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+
+    /* Change styles for cancel button and signup button on extra small screens */
+    @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+    width: 100%;
+    }
+    }
+    </style>
+    
+                        <body>
+                        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;background-color:#001e25cb; font-size:20px; color:white;">New Contact</button>
+                        <div id="id01" class="modal">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <form class="modal-content" action="/action_page.php">
+                        <div class="container">
+            
+                            <h2>Contact</h2>
+                    <label for="Role">Role:</label><select id="status" name="status" style="width:200px; margin-right:15px; height:40px; background-color:white; border: 1.5px solid #ddd; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                            <option value="blank"></option>
+                            <option value="">Adjuster</option>
+                            <option value="">Defendant</option>
+                            <option value="">Expert</option>
+                            <option value="">Insurance Provider</option>
+                            <option value="">Medical Provider</option>
+                            <option value="">Plaintiff</option>
+                            <option value="">Plaintiff Companion</option>
+                            <option value="">Subrogation</option>
+                            <option value="">Witness</option>
+                            <option value="">Other</option>
+                            </select>
+                    
+                    <label for="Prefix">Prefix:</label><select id="status" name="status" style="width:60px; margin-right:10px; height:40px; background-color:white; border: 1.5px solid #ddd; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                            <option value="blank"></option>
+                            <option value="">Mr.</option>
+                            <option value="">Ms.</option>
+                            <option value="">Mrs.</option>
+                            <option value=""></select>
+    
+	                <label for="Role">Suffix:</label><select id="status" name="status" style="width:60px; margin-right:10px; height:40px; background-color:white; border: 1.5px solid #ddd; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                            <option value="blank"></option>
+                            <option value="">Dr.</option>
+                            <option value="">MD</option>
+                            <option value="">PA</option>
+                            <option value="">PT</select><br><br>
+                    <label for="FName" style="margin-right: right 10px;">First:</label>
+                    <input type="text" placeholder="" name="email" style="width:200px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+      
+                    <label for="LName">Last:</label>
+                    <input type="text" placeholder="" name="email" style="width:260px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;"> <br>
+       
+                    <label for="Phone">Phone No.:</label>
+                    <input type="text" placeholder="(xxx)xxx-xxxx" name="email" style="width:140px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+
+                    <label for="Ext">Ext:</label>
+                    <input type="text" placeholder="ext." name="email" style="width:75px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                        
+                    <label for="Fax">Fax No.:</label>
+                    <input type="text" placeholder="(xxx)xxx-xxxx" name="email" style="width:140px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">  
+                    <br>
+
+                    <label for="Email" style="margin-right:40px">Email:</label>
+                    <input type="text" style="font-size:18px; width: 550px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif" placeholder="" name="psw">
+                    <br>  
+                    
+                    <label for="Company" style="margin-right:20px">Company:</label>
+                    <input type="text" style="font-size:18px; width: 550px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman, Times, Serif" placeholder="" name="psw">
+                    <br>
+                    
+                    <label for="Address" style="margin-right:15px">Address:</label>
+                    <input type="text" style="font-size:18px; width: 550px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif" placeholder="" name="psw">
+                    <br>
+                    
+                    <label for="Street2">Street No. 2:</label>
+                    <input type="text" style="font-size:18px; width: 550px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif" placeholder="Address 2" name="psw">
+                    
+                    <label for="City"></label>
+                    <input type="text" placeholder="City" name="email" style="width:180px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+
+                    <label for="State"></label>
+                    <input type="text" placeholder="State" name="email" style="width:180px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd;font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                        
+                    <label for="Zip"></label>
+                    <input type="text" placeholder="Zip" name="email" style="width:180px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">  
+                    <br>
 
 
-</div>
+                    <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Add</button>
+                    </div>
+                    </div>
+                    </form>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>
 </body></html>
