@@ -9,9 +9,10 @@
     * {
         box-sizing: border-box;
     }
-    
     body {
-      margin: 0;
+        font-family: "Times New Roman", Times, sans-serif;
+        background-color: white;
+        margin: 0;
     }
     
     /* Style the header */
@@ -51,62 +52,244 @@
         padding: 15px;
     }
     
-    /* Clear floats after the columns */
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #29AB77;
+        font-family: "Times New Roman", Times, sans-serif;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
     }
-    
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width:600px) {
-        .column {
-            width: 100%;
-        }
+                            
+    .sidebar a {
+        padding: 8px 8px 8px 8px;
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+                            
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+    }
+                            
+    .openbtn:hover {
+        background-color: #444;
+    }
+                            
+    #main {
+        transition: margin-right .5s;
+        padding: 16px;
+    }
+                            
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+    }
+                            
+    .table {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+                            
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 18px;
+    }
+                            
+    tr:nth-child(even) {
+        background-color: white;
+        color:#43A2CC; 
+    }
+                            
+    tr:nth-child(odd) {
+        background-color: white;
+        color: #43A2CC;
+    }                       
+    </style>
+
+    <div class="header">
+    <head>
+    <style>
+    input[type=text] {
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid #001e25cb;
+    border-radius: 4px;
+    font: times new roman;
+    font-size: 20px;
+    background-color: white;
+    color: #000000;
+    padding: 12px 20px 12px 40px;
     }
     </style>
-                        <body>
-                        <div class="header">
-                        <head>
-                        <style>
-                        input[type=text] {
-                        width: 50%;
-                        box-sizing: border-box;
-                        border: 2px solid #001e25cb;
-                        border-radius: 4px;
-                        font: times new roman;
-                        font-size: 20px;
-                        background-color: white;
-                        color: #000000;
-                        background-image: url('searchicon.png');
-                        background-position: 10px 10px; 
-                        background-repeat: no-repeat;
-                        padding: 12px 20px 12px 40px;
-                        }
-                        </style>
-                        </head>
-                        
-                        <body>
-                        <form>
-                        <input type="text" name="search" placeholder="Search..">
-                        </form>
-                        </body>
-                        </div>
+    </head>
+    <body>
+    <form>
+    <input type="text" name="search" placeholder="Search..">
+    </form>
+    </body>
+   </div>                    
+                            
+   <div class="topnav">
+    <a href="index.html" target="_self"> Case</a>
+    <a href="page2.html" target="_self"> Contacts</a>
+    <a href="page3.html" target="_self"> Correspondence</a>
+    <a href="page4.html" target="_self"> Depositions</a>
+    <a href="page5.html" target="_self"> Discovery</a>
+    <a href="page6.html" target="_self"> Documents</a>
+    <a href="page7.html" target="_self"> Expenses</a>
+    <a href="page8.html" target="_self"> Insurance</a>
+    <a href="page9.html" target="_self"> Liens</a>
+    <a href="page10.html" target="_self"> Mediation</a>
+    <a href="page11.html" target="_self"> Medical</a>
+    <a href="page12.html" target="_self"> Notes</a>
+    <a href="page13.html" target="_self"> Settlement Calculator</a>
+   </div>
+   
+   <div id="mySidebar" class="sidebar">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#"><u>Contact Details</u></a>
+    <a href="#">Name</a>
+    <a href="#">Role</a>
+    <a href="#">Phone No.</a>
+    <a href="#">Fax No.</a>
+    <a href="#">Email</a>
+    <a href="#">Address</a>
+    <a href="#">Company</a>
+    </div>
+
+    <div id="main">
+    <table id="myTable">
+    <tr>
+    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+    <th onclick="sortTable(0)"></th>   
+    <th onclick="sortTable(1)">Last Name</th>
+    <th onclick="sortTable(2)">First Name</th>
+    <th onclick="sortTable(3)">Role</th>
+    <th onclick="sortTable(4)">Phone No.</th>
+    <th onclick="sortTable(5)">Fax No.</th>
+    <th onclick="sortTable(6)">Email</th>
+    </tr>
     
-                        <div class="topnav">
-                        <a href="index.html" target="_self"> Case</a>
-                        <a href="page2.html" target="_self"> Contacts</a>
-                        <a href="page3.html" target="_self"> Correspondence</a>
-                        <a href="page4.html" target="_self"> Depositions</a>
-                        <a href="page5.html" target="_self"> Discovery</a>
-                        <a href="page6.html" target="_self"> Documents</a>
-                        <a href="page7.html" target="_self"> Expenses</a>
-                        <a href="page8.html" target="_self"> Insurance</a>
-                        <a href="page9.html" target="_self"> Liens</a>
-                        <a href="page10.html" target="_self"> Mediation</a>
-                        <a href="page11.html" target="_self"> Medical</a>
-                        <a href="page12.html" target="_self"> Notes</a>
-                        <a href="page13.html" target="_self"> Settlement Calculator</a>
-                        </div>
+    <tr>
+    <td><input type="checkbox" name="chk"></td>
+    <td><button class="openbtn" style="background-color:white; color:#43A2CC; width:180px; solid #ddd; font-family:'Times New Roman', Times, serif; font-size: 16px" onclick="openNav()">Doe</button></td>
+    <td><button class="openbtn" style="background-color:white; color:#43A2CC; width:150px; solid #ddd; font-family:'Times New Roman', Times, serif; font-size: 16px" onclick="openNav()">Jane</button></td>            					<td>Client</td>
+    <td>(832)829-9034</td>
+    <td></td>
+    <td>jane.doe@gmail.com</td>
+    </tr>
+    <tr>
+    <td><input type="checkbox" name="chk"></td>
+    <td><button class="openbtn" style="background-color:white; color:#43A2CC; width:180px; solid #ddd; font-family:'Times New Roman', Times, serif; font-size: 16px" onclick="openNav()">Nixon</button></td>
+    <td><button class="openbtn" style="background-color:white; color:#43A2CC; width:150px; solid #ddd; font-family:'Times New Roman', Times, serif; font-size: 16px" onclick="openNav()">John</button></td>             <td>Defendant</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><input type="checkbox" name="chk"></td>
+    <td><button class="openbtn" style="background-color:white; color:#43A2CC; width:180px; solid #ddd; font-family:'Times New Roman', Times, serif; font-size: 16px" onclick="openNav()">Byerly</button></td>
+    <td><button class="openbtn" style="background-color:white; color:#43A2CC; width:150px; solid #ddd; font-family:'Times New Roman', Times, serif; font-size: 16px" onclick="openNav()">Elliot</button></td>             <td>Plaintiff-Companion</td>
+    <td>(512)220-1800</td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><input type="checkbox" name="chk"></td>
+    <td><button class="openbtn" style="background-color:white; color:#43A2CC; width:180px; solid #ddd; font-family:'Times New Roman', Times, serif; font-size: 16px" onclick="openNav()">Morris</button></td>
+    <td><button class="openbtn" style="background-color:white; color:#43A2CC; width:150px; solid #ddd; font-family:'Times New Roman', Times, serif; font-size: 16px" onclick="openNav()">Richard</button></td>             <td>Adjuster</td>
+    <td>(800)531-8669</td>
+    <td>(214)871-5164</td>
+    <td>rich.morris@usaa.com</td>
+    </tr>
+    </table>
+    
+    <script>
+    function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    }
+                            
+    function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    }
+                            
+    function sortTable(n) {
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.getElementById("myTable");
+    switching = true;
+    //Set the sorting direction to ascending:
+    dir = "asc"; 
+    /*Make a loop that will continue until no switching has been done:*/
+    while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+    //start by saying there should be no switching:
+    shouldSwitch = false;
+    /*Get the two elements you want to compare, one from current row and one from the next:*/
+    x = rows[i].getElementsByTagName("TD")[n];
+    y = rows[i + 1].getElementsByTagName("TD")[n];
+    /*check if the two rows should switch place, based on the direction, asc or desc:*/
+    if (dir == "asc") {
+    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+    //if so, mark as a switch and break the loop:
+    shouldSwitch= true;
+    break;
+    }
+    } else if (dir == "desc") {
+    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+    //if so, mark as a switch and break the loop:
+    shouldSwitch = true;
+    break;
+    }
+    }
+    }
+    if (shouldSwitch) {
+    /*If a switch has been marked, make the switch and mark that a switch has been done:*/
+    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+    switching = true;
+    //Each time a switch is done, increase this count by 1:
+    switchcount ++;      
+    } else {
+    /*If no switching has been done AND the direction is "asc", set the direction to "desc" and run the while loop again.*/
+    if (switchcount == 0 && dir == "asc") {
+    dir = "desc";
+    switching = true;
+    }
+    }
+    }
+    }
+    </script>
+    </body>
 
 </body></html>                  
