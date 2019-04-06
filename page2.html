@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">  
   </head>
 
-    <style>
+  <style>
     * {
         box-sizing: border-box;
     }
@@ -21,27 +21,64 @@
         text-align: center;
     }
     
-    .topnav {
+    .navbar {
         overflow: hidden;
-        background-color: #001e25cb;
+        background-color: #931621;
     }
     
-    .topnav a {
+    .navbar a {
         float: left;
         display: block;
+        font-size: 16px;
         color: #f2f2f2;
-        font-family: 'Times New Roman', Times, serif;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
     }
     
-    /* Change color on hover */
-    .topnav a:hover {
-        background-color: #0044647c;
-        color: rgb(255, 255, 255);
+    .dropdown {
+        float:left;
+        overflow: hidden;
     }
-       
+
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: #931621;
+        margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+        background-color:#910D0D;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #931621;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float:none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .dropdown-content a:hover {
+        background-color: #910D0D;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display:block;
+    }
     .sidebar {
         height: 100%;
         width: 0;
@@ -49,7 +86,7 @@
         z-index: 1;
         top: -10;
         left: 0;
-        background-color: #29AB77;
+        background-color: #FFB868;
         font-family: "Times New Roman", Times, sans-serif;
         overflow-x: hidden;
         transition: 0.5s;
@@ -92,12 +129,61 @@
     .openbtn:hover {
         background-color: #444;
     }
-                          
     #main {
         transition: margin-right .5s;
         padding: 16px;
     }
-                            
+    
+    /* Set a style for all buttons */
+    button {
+    background-color: #BBF243; 
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    float: center;
+    font-size: 16px;
+    border:none;
+    cursor: pointer;
+    padding: 14px 20px 15px 20px;
+    opacity: 0.9;
+    }
+        
+    /* Full-width input fields */
+    input[type=text] {
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    }
+    
+    /* Add padding to container elements */
+    .container {
+    padding: 16px;
+    }
+    
+    /* The Modal (background) */
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /*Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: #931621;
+    padding-top: 50px;
+    }
+    
+    /* Modal Content Box */
+    .modal-content {
+    background-color: #fefefe;
+    width: 40%;
+    height: 80%;
+    overflow: auto; /* Enable scroll if needed */
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    }
     /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
     @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
@@ -121,13 +207,13 @@
                             
     tr:nth-child(even) {
         background-color: white;
-        color:#43A2CC; 
+        color:#00A878; 
         width:125px;
     }
                             
     tr:nth-child(odd) {
         background-color: white;
-        color: #43A2CC;
+        color: #00A878;
         width: 125px; 
     }                  
     </style>
@@ -138,7 +224,7 @@
     input[type=text] {
     width: 50%;
     box-sizing: border-box;
-    border: 2px solid #001e25cb;
+    border: 2px solid #910D0D;
     border-radius: 4px;
     font: times new roman;
     font-size: 20px;
@@ -155,20 +241,28 @@
     </body>
    </div>                    
                             
-   <div class="topnav">
-    <a href="index.html" target="_self"> Case</a>
+   <div class="navbar">
+    <a href="index.html" target="_self"> Home</a>
     <a href="page2.html" target="_self"> Contacts</a>
     <a href="page3.html" target="_self"> Correspondence</a>
-    <a href="page4.html" target="_self"> Depositions</a>
-    <a href="page5.html" target="_self"> Discovery</a>
-    <a href="page6.html" target="_self"> Documents</a>
-    <a href="page7.html" target="_self"> Expenses</a>
-    <a href="page8.html" target="_self"> Insurance</a>
-    <a href="page9.html" target="_self"> Liens</a>
-    <a href="page10.html" target="_self"> Mediation</a>
-    <a href="page11.html" target="_self"> Medical</a>
-    <a href="page12.html" target="_self"> Notes</a>
-    <a href="page13.html" target="_self"> Settlement Calculator</a>
+    <a href="page4.html" target="_self"> Documents</a>
+    <a href="page5.html" target="_self"> Expenses</a>
+    <a href="page6.html" target="_self"> Insurance</a>
+    <a href="page7.html" target="_self"> Liens/Subro</a>
+    <div class="dropdown">
+        <button class='dropbtn'>Litigation
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+                <a href="#">ASO/Calendar</a>    
+                <a href="#">Depositions</a>
+                <a href="#">Discovery</a>
+                <a href="#">Mediation</a> 
+        </div>
+    </div>
+    <a href="page8.html" target="_self"> Medical</a>
+    <a href="page9.html" target="_self"> Notes</a>
+    <a href="page10.html" target="_self"> Settlement Calculator</a>
    </div>
    
    <div id="mySidebar" class="sidebar">
@@ -198,26 +292,26 @@
     
     <tr>
     <td><input type="checkbox" name="chk"></td>
-    <td><button class="openbtn" style="background-color:white; color:#43A2CC; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">Doe</button></td>
-    <td><button class="openbtn" style="background-color:white; color:#43A2CC; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">Jane</button></td>            					
-    <td><Client</td>
+    <td><button class="openbtn" style="background-color:white; color:#00A878; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">Doe</button></td>
+    <td><button class="openbtn" style="background-color:white; color:#00A878; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">Jane</button></td>            					
+    <td>Witness</td>
     <td>(832)829-9034</td>
     <td></td>
     <td>jane.doe@gmail.com</td>
     </tr>
     <tr>
     <td><input type="checkbox" name="chk"></td>
-    <td><button class="openbtn" style="background-color:white; color:#43A2CC; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">Nixon</button></td>
-    <td><button class="openbtn" style="background-color:white; color:#43A2CC; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">John</button></td>             
+    <td><button class="openbtn" style="background-color:white; color:#00A878; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">Nixon</button></td>
+    <td><button class="openbtn" style="background-color:white; color:#00A878; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">John</button></td>             
     <td>Defendant</td>
+    <td>(832)638-3807</td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td>jfr.nixon@hotmail.com</td>
     </tr>
     <tr>
     <td><input type="checkbox" name="chk"></td>
-    <td><button class="openbtn" style="background-color:white; color:#43A2CC; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">Byerly</button></td>
-    <td><button class="openbtn" style="background-color:white; color:#43A2CC; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:150px" onclick="openNav()">Elliot</button></td>             
+    <td><button class="openbtn" style="background-color:white; color:#00A878; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">Byerly</button></td>
+    <td><button class="openbtn" style="background-color:white; color:#00A878; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:150px" onclick="openNav()">Elliot</button></td>             
     <td>Plaintiff-Companion</td>
     <td>(512)220-1800</td>
     <td></td>
@@ -225,18 +319,100 @@
     </tr>
     <tr>
     <td><input type="checkbox" name="chk"></td>
-    <td><button class="openbtn" style="background-color:white; color:#43A2CC; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">Morris</button></td>
-    <td><button class="openbtn" style="background-color:white; color:#43A2CC; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:150px" onclick="openNav()">Richard</button></td>             
+    <td><button class="openbtn" style="background-color:white; color:#00A878; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">Morris</button></td>
+    <td><button class="openbtn" style="background-color:white; color:#00A878; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:150px" onclick="openNav()">Richard</button></td>             
     <td>Adjuster</td>
     <td>(800)531-8669</td>
     <td>(214)871-5164</td>
     <td>rich.morris@usaa.com</td>
     </tr>
     </table></div>
+   
+    
+    <button onclick="myFunction('')">Insert Existing</button>   
+    <button> Delete </button> 
+    <button onclick="document.getElementById('id01').style.display='block'"> New Contact</button>
+    <div id='id01' class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form class="modal-content" action="/action_page.php">
+	<div class="container">
+    <h2>New Contact</h2>
+    
+    <label for="Role">Role:</label><select id="status" name="status" style="width:200px; margin-right:15px; height:40px; background-color:white; border: 1.5px solid #ddd; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                            <option value="blank"></option>
+                            <option value="">Adjuster</option>
+                            <option value="">Defendant</option>
+                            <option value="">Expert</option>
+                            <option value="">Insurance Provider</option>
+                            <option value="">Medical Provider</option>
+                            <option value="">Plaintiff</option>
+                            <option value="">Plaintiff Companion</option>
+                            <option value="">Subrogation</option>
+                            <option value="">Witness</option>
+                            <option value="">Other</option>
+                            </select>
+                    
+                    <label for="Prefix">Prefix:</label><select id="status" name="status" style="width:60px; margin-right:10px; height:40px; background-color:white; border: 1.5px solid #ddd; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                            <option value="blank"></option>
+                            <option value="">Mr.</option>
+                            <option value="">Ms.</option>
+                            <option value="">Mrs.</option>
+                            <option value=""></select>
+    
+	                <label for="Role">Suffix:</label><select id="status" name="status" style="width:60px; margin-right:10px; height:40px; background-color:white; border: 1.5px solid #ddd; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                            <option value="blank"></option>
+                            <option value="">Dr.</option>
+                            <option value="">MD</option>
+                            <option value="">PA</option>
+                            <option value="">PT</select><br><br>
+                    <label for="FName" style="margin-right: right 10px;">First:</label>
+                    <input type="text" placeholder="" style="width:200px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+      
+                    <label for="LName">Last:</label>
+                    <input type="text" placeholder="" style="width:260px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;"> <br>
+       
+                    <label for="Phone">Phone No.:</label>
+                    <input type="text" placeholder="(xxx)xxx-xxxx" style="width:140px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">
 
-    <button onclick="myFunction('')">Add Contact</button>
+                    <label for="Ext">Ext:</label>
+                    <input type="text" placeholder="ext." style="width:75px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                        
+                    <label for="Fax">Fax No.:</label>
+                    <input type="text" placeholder="(xxx)xxx-xxxx" style="width:140px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">  
+                    <br>
 
-    <script>
+                    <label for="Email" style="margin-right:40px">Email:</label>
+                    <input type="text" style="font-size:18px; width: 550px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif" placeholder="">
+                    <br>  
+                    
+                    <label for="Company" style="margin-right:20px">Company:</label>
+                    <input type="text" style="font-size:18px; width: 550px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman, Times, Serif" placeholder="">
+                    <br>
+                    
+                    <label for="Address" style="margin-right:15px">Address:</label>
+                    <input type="text" style="font-size:18px; width: 550px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif" placeholder="">
+                    <br>
+                    
+                    <label for="Street2">Address No. 2</label>
+                    <input type="text" style="font-size:18px; width: 550px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
+                    
+                    <label for="City"></label>
+                    <input type="text" placeholder="City" style="width:165px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+
+                    <label for="State"></label>
+                    <input type="text" placeholder="State" style="width:165px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd;font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                        
+                    <label for="Zip"></label>
+                    <input type="text" placeholder="Zip" style="width:165px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">  
+                    <br>
+	<div class="clearfix"> 
+    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"> Cancel </button>
+    <button>Add Contact</button>
+    </div>
+    </div>
+    </form>
+    
+    <script>    
     function openNav() {
     document.getElementById("mySidebar").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
@@ -245,25 +421,6 @@
     function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
-    }
-
-    function myFunction() {
-    var table = document.getElementById("myTable");
-    var row = table.insertRow(5);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    var cell4 = row.insertCell(3);
-    var cell5 = row.insertCell(4);
-    var cell6 = row.insertCell(5);
-    var cell7 = row.insertCell(6);
-    cell1.innerHTML = ""
-    cell2.innerHTML = ""
-    cell3.innerHTML = ""
-    cell4.innerHTML = ""
-    cell5.innerHTML = ""
-    cell6.innerHTML = ""
-    cell7.innerHTML = ""
     }
  
     function sortTable(n) {
@@ -314,5 +471,33 @@
         }
         }
         }
-        </script>
+ function myFunction() {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(5);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
+    var cell6 = row.insertCell(5);
+    var cell7 = row.insertCell(6);
+    cell1.innerHTML = ""
+    cell2.innerHTML = ""
+    cell3.innerHTML = ""
+    cell4.innerHTML = ""
+    cell5.innerHTML = ""
+    cell6.innerHTML = ""
+    cell7.innerHTML = ""
+    }
+ 
+ // Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
         </body></html>                  
