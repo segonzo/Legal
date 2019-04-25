@@ -16,6 +16,26 @@
     background-color: white;
     margin: 0;
     }
+
+    table {
+    font-family: 'Times New Roman', Times, serif;
+    color:#701613;
+    font-size: 18px;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 5%;
+    }
+    
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: white;
+        color:black; 
+    }
     
     .header {
         background-color: white;
@@ -85,6 +105,88 @@
         color:white;
         font-family:'Times New Roman', 'Times New Roman', Times, serif;
     }
+    /* The Modal (background) */
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    /* Modal Content */
+    .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 37%;
+    height: 90%;
+    overflow: auto; /* Enable scroll if needed */
+    }
+    /* The Close Button */
+    .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+    /* The Modal Button */
+    .modalbtn {
+        background-color: black;
+        color: white;
+        float: center;
+        font-size: 24px;
+    }
+    .close:hover,
+    .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    .button {
+        float: center;
+        border-radius: 12px;
+        background-color: #00381F;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 18px;
+        padding: 6px;
+        width: 150px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        }
+
+        .button span {
+        cursor: pointer;
+        position: relative;
+        transition: 0.5s;
+        }
+
+        .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+        }
+
+        .button:hover span {
+        padding-right: 25px;
+        }
+
+        .button:hover span:after {
+        opacity: 1;
+        right: 0;
+        }
     </style>
     
     <div class="header">
@@ -132,5 +234,169 @@
             <a href="page9.html" target="_self"> Notes</a>
             <a href="page10.html" target="_self"> Settlement Calculator</a>
            </div>
+           <body>
+                
+                <table id="Medical Table">
+                <tr>
+                <th></th>
+                <th>Provider</th>
+                <th>Charged</th>
+                <th>Paid</th>
+                <th>Adjusted</th>
+                <th>Written Off</th>
+                <th>Balance</th>
+                <th>Bill</th>
+                <th>Record</th>
+                </tr>
+                <tr>
+                <td><input type="checkbox" name="chk"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>
+                <tr>
+                <td><input type="checkbox" name="chk"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>
+                <tr>
+                <td><input type="checkbox" name="chk"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>            
+                <tr>
+                <td><input type="checkbox" name="chk"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>                    
+                </table>
+
+                <body>
+                <center>
+                <!-- Trigger/Open The Modal -->
+                <button id="myBtn" class="button" style="vertical-align:middle"><span> Add </span></button>
+                <button class="button" style="vertical-align:middle"><span>Delete </span></button>
+                </center>
+                        
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="container">
+                <div class="header">
+                <center><h3>Medical Provider</h3>
+                <head>
+                <style>
+                input[type=text] {
+                box-sizing: border-box;
+                border: 1.5px solid #ddd;
+                border-radius: 2px;
+                font: times new roman;
+                font-size: 20px;
+                background-color: white;
+                color: #000000;
+                }
+                </style>
+                </head></center>
+                <body>
+                <form>
+                <input type="text" style="font-size:18px; font-family:'Times New Roman', Times, Serif" name="search" placeholder="Search...">
+                </form>
+                </body>
+                </div>                         
+                        <br>
+                         <label for="Name">Name:</label>
+                         <label for="Phone" style="margin-left:275px">Phone:</label>
+                         <br>
+                         <input type="text" style="font-size:18px; width: 290px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
+                         <input type="text" placeholder="(xxx)xxx-xxxx" style="font-size:18px; margin-left:28px; width: 160px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif"> 
+                         <br><br>
+                         <label for="Type">Type:</label>
+                         <label for="Phone" style="margin-left:280px">Fax:</label>
+                         <br>
+                         <select id="type" name="type" style="background-color:white; width: 290px; border: 1.5px solid #ddd; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px">
+                                                    <option value="blank"></option>
+                                                    <option value="">ER Physician</option>
+                                                    <option value="">EMS</option>
+                                                    <option value="">Hospital</option>
+                                                    <option value="">Orthopedic</option>
+                                                    <option value="">Physical Therapy</option>
+                                                    <option value="">Chiropractic</option>
+                                                    <option value="">Pain Management</option>
+                                                    <option value="">Neurology</option>
+                                                    <option value="">Psychological</option>
+                                                    <option value="">Other</select>
+                                                    
+            <input type="text" placeholder="(xxx)xxx-xxxx" style="font-size:18px; margin-left:28px; width: 160px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif"> 
+            <br><br>
+            <label for="Address">Address:</label>
+            <label for="Suite" style="margin-left:260px">Suite/Building</label>
+            <br>
+            <input type="text" style="font-size:18px; width: 290px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
+            <input type="text" style="font-size:18px; margin-left:28px; width: 160px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif"> 
+            <br><br>
+            <label for="Email" style="margin-left:320px"> Email:</label>
+            <br>
+            <input type="text" placeholder="City" style="font-size:18px; width: 110px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
+            <input type="text" placeholder="State" style="font-size:18px; width: 90px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
+            <input type="text" placeholder="Zip" style="font-size:18px; width: 80px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
+            <input type="text" style="font-size:18px; margin-left:28px; width: 160px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif"> 
+            <br><br>
+            <center>
+            <button style="color:white; border-radius: 12px;background-color: #00381F;border: none;text-align: center; font-size: 18px;padding: 6px;width: 150px;cursor: pointer;margin: 5px;">Add</button></center>
+            </div>
+            <body>
+                        
+                        <script>
+                        // Get the modal
+                        var modal = document.getElementById('myModal');
+                        
+                        // Get the button that opens the modal
+                        var btn = document.getElementById("myBtn");
+                        
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+                        
+                        // When the user clicks the button, open the modal 
+                        btn.onclick = function() {
+                          modal.style.display = "block";
+                        }
+                        
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() {
+                          modal.style.display = "none";
+                        }
+                        
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                          if (event.target == modal) {
+                            modal.style.display = "none";
+                          }
+                        }
+                        </script>
+
 
            </html>
