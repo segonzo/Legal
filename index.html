@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>LAYOUT</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
   </head>
+  
   <style>
         * {
             box-sizing: border-box;
         }
         body {
             font-family: "Times New Roman", Times, sans-serif;
-            background-color: white;
+            font-size:  16px;
+            background-color: #F3FFBC
+;
             margin: 0;
         }
         
         .header {
             background-color: white;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
         }
-        
         .navbar {
             overflow: hidden;
-            background-color: #931621;
+            background-color: #6BDBA7;
+            font-size: 18 px; 
+            color: white;
         }
         
         .navbar a {
             float: left;
             display: block;
-            font-size: 16px;
-            color: #f2f2f2;
+            font-size: 18px;
+            color: white;
             text-align: center;
-            padding: 14px 16px;
+            padding: 16px 16px;
             text-decoration: none;
         }
         
@@ -42,29 +45,28 @@
         }
     
         .dropdown .dropbtn {
-            font-size: 16px;
+            font-size: 18px;
             border: none;
             outline: none;
             color: white;
-            padding: 14px 16px;
-            background-color: #931621;
+            padding: 16px 16px;
+            background-color: #6BDBA7;
             margin: 0;
         }
     
         .navbar a:hover,
         .dropdown:hover .dropbtn {
-            background-color:#910D0D;
+            background-color: #C1C85D;
         }
         
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #931621;
+            background-color: #6BDBA7;
             min-width: 160px;
             z-index: 1;
         }
-    
-        .dropdown-content a {
+            .dropdown-content a {
             float:none;
             color: white;
             padding: 12px 16px;
@@ -72,17 +74,16 @@
             display: block;
             text-align: left;
         }
+
         .dropdown-content a:hover {
-            background-color: #910D0D;
+            background-color: #C1C85D;
         }
     
         .dropdown:hover .dropdown-content {
             display:block;
         }
-        #main {
-            transition: margin-right .5s;
-            padding: 16px;
-        }
+
+        
         /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
         @media screen and (max-width:600px) {
         .column {
@@ -98,7 +99,7 @@
         .column {
         float: left;
         width: 50%;
-        padding: 15px;
+        padding: 20px;
         }
         /* Clear floats after the columns */
         .row:after {
@@ -107,14 +108,14 @@
         clear: both;
         }
         </style>
-    
-        <div class="header">
+   
+      <div class="header">
         <head>
         <style>
         input[type=text] {
         width: 50%;
         box-sizing: border-box;
-        border: 2px solid #910D0D;
+        border: 2px solid #4D9DE0;
         border-radius: 4px;
         font: times new roman;
         font-size: 20px;
@@ -123,18 +124,17 @@
         padding: 12px 20px 12px 40px;
         }
         </style>
-        </head>
         <body>
-        <form>
-        <input type="text" name="search" placeholder="Search..">
-        </form>
-        </body>
-       </div>                    
+       <form><input type="text" name="search" placeholder="Search..">
+        </form></body>
+      </div>
+       
      <div class="navbar">
-            <a href="index.html" target="_self"> Home</a>
-            <a href="page2.html" target="_self"> Contacts</a>
-            <a href="page3.html" target="_self"> Correspondence</a>
-            <a href="page4.html" target="_self"> Documents</a>
+            <a href="index.html" target="_self"> Case</a>
+            <a href="page1.html" target="_self"> Contacts</a>
+            <a href="page2.html" target="_self"> Correspondence</a>
+            <a href="page3.html" target="_self"> Documents</a>
+            <a href="page4.html" target="_self"> Email</a>
             <a href="page5.html" target="_self"> Expenses</a>
             <a href="page6.html" target="_self"> Insurance</a>
             <a href="page7.html" target="_self"> Liens/Subro</a>
@@ -158,28 +158,24 @@
     <div class="column">
     <head>
                     <style>
-                    * {
-                        box-sizing: border-box;
-                    }
-                    
-                    input[type=text], select, textarea {
-                        width: 100%;
-                        padding: 4px;
-                        border: 1px solid #ccc;
-                        border-radius: 4px;
-                        resize: vertical;
-                    }
                     
                     label {
                         padding: 4px 4px 4px 0;
                         display: inline-block;
                     }
                     
-                    .container {
-                        border-radius: 5px;
-                        background-color: hsl(0, 0%, 100%);
-                        padding: 20px;
-                    }
+                   .container {
+                              border-radius: 5px;
+                              background-color: hsl(0, 0%, 100%);
+                              padding: 20px;
+                          }
+                       		.container input[type=text], select, textarea {
+                        	width: 100%;
+                        	padding: 4px;
+                        	border: 1px solid #ccc;
+                        	border-radius: 4px;
+                        	resize: vertical;
+                    	}
                     
                     .col-25 {
                         float: left;
@@ -211,9 +207,9 @@
                     
                     /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
                     @media screen and (max-width: 600px) {
-                        .col-25, .col-75, input[type=submit] {
+                        .col-25, .col-50, .col-75, input[type=submit] {
                             width: 100%;
-                            margin-top: 0;
+                            margin-top: 20;
                         }
                     }
                     </style>
@@ -221,13 +217,13 @@
                 
                     
                     <div class="container">
-                        <form action="/action_page.php">
+                    <form action="/action_page.php">
                             <div class="row">
                             <div class="col-25">
                             <label for="fname">First Name</label>
                             </div>
                             <div class="col-75">
-                            <input type="text" id="fname" name="firstname">
+                            <input type="text" id="fname" name="fname">
                             </div>
                             </div>
 
@@ -236,7 +232,7 @@
                             <label for="lname">Last Name</label>
                             </div>
                             <div class="col-75">
-                            <input type="text" id="lname" name="lastname">
+                            <input type="text" id="lname" name="lname">
                             </div>
                             </div>
                         
@@ -271,18 +267,15 @@
                             <div class="col-25">
                             <label for="City"></label>
                             </div>
-                                    <div class="col-50">
-                                    <input type="text" id="City" name="City" placeholder="City">
-                                    </div>
-                                    
-                                    <div class="col-50">
-                                    <input type="text" id="State" name="State" placeholder="State">
-                                    </div>
-
-                                    <div class="col-50">
-                                    <input type="text" id="Zip" name="Zip" placeholder="Zip Code">
-                                    </div>
-
+                            <div class="col-50">
+                            <input type="text" id="City" name="City" placeholder="City">
+                            </div>
+                            <div class="col-50">
+                            <input type="text" id="State" name="State" placeholder="State">
+                            </div>
+                            <div class="col-50">
+                            <input type="text" id="Zip" name="Zip" placeholder="Zip Code">
+                            </div>
                             </div>      
                         
                             <div class="row">
@@ -320,48 +313,15 @@
                             <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
                             </div>
                             </div>
-
-                            <div class="row">
-                            <div class="col-25">
-                            <label for="Case Status">Case Status</label>
-                            </div>
-                            <div class="col-75">
-                            <select id="Case Status" name="Case Status">
-                            <option value="blank"></option>
-                            <option value="Treating">Treating</option>
-                            <option value="Post-Treatment">Post-Treatment</option>
-                            <option value="Demand Prep">Demand Prep</option>
-                            <option value="Negotiationg">Negotiating</option>
-                            <option value="Settled - Waiting on Funds"> Settled - Waiting on Funds</option>
-                            <option value="Settled - Disbursing"> Settled - Disbursing</option>
-                            <option value="Closed">Closed</option>
-                            <option value="Referred Out">Referred Out</option>
-                            <option value="Dropped">Dropped</option>
-                            </select>
-                            </div>
-                            </div>
-
-                            </form>
-                    </div>               
-                    </body>
-    </div>
-
+             				</div>
+                    		</body>
+   
+	</div>
     <div class="row">
     <div class="column">
     <head>
-    <style>
-           * {
-                              box-sizing: border-box;
-                          }
-                          
-                          input[type=text], select, textarea {
-                              width: 100%;
-                              padding: 4px;
-                              border: 1px solid #ccc;
-                              border-radius: 4px;
-                              resize: vertical;
-                          }
-                          
+    					<style>
+                       
                           label {
                               padding: 4px 4px 4px 0;
                               display: inline-block;
@@ -372,6 +332,13 @@
                               background-color: hsl(0, 0%, 100%);
                               padding: 20px;
                           }
+                       		.container input[type=text], select, textarea {
+                        	width: 100%;
+                        	padding: 4px;
+                        	border: 1px solid #ccc;
+                        	border-radius: 4px;
+                        	resize: vertical;
+                    	}
                           
                           .col-25 {
                               float: left;
@@ -529,7 +496,7 @@
         <label for="Plgl">Paralegal 2</label>
         </div>
                 <div class="col-75">
-                <select id="Plgl" name="Plgl" aria-placeholder="Attorney">
+                <select id="Plgl2" name="Plgl2" aria-placeholder="Attorney">
                 <option value="blank"></option>
                 <option value="Atty">Paralegal 1</option>
                 <option value="Atty">Paralegal 2</option>
@@ -537,6 +504,40 @@
                 </select>
                 </div>
                 </div>
+				
+                <br>
+                <br>
+                
+				<div class="row">
+                <div class="col-25">
+                <label for="Case Status">Case Status</label>
+                </div>
+                
+                <div class="col-75">
+                <select id="Case Status" name="Case Status">
+                <option value="blank"></option>
+                <option value="Treating">Treating</option>
+                <option value="Post-Treatment">Post-Treatment</option>
+                <option value="Demand Prep">Demand Prep</option>
+                <option value="Negotiationg">Negotiating</option>
+                <option value="Settled - Waiting on Funds"> Settled - Waiting on Funds</option>
+                <option value="Settled - Disbursing"> Settled - Disbursing</option>
+                <option value="Closed">Closed</option>
+                <option value="Referred Out">Referred Out</option>
+                <option value="Dropped">Dropped</option>
+                </select>
+                </div>
+                </div>
+                                
+                <div class="row">
+        		<div class="col-25">
+        		<label for="value">Valuation</label>
+        		</div>
+                <div class="col-75">
+                <input type="text" id="value" name="value" placeholder="">
+                </div>
+                </div>
+
 
         <div class="row">
         <div class="col-25">
