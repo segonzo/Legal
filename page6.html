@@ -12,28 +12,31 @@
     }
     body {
         font-family: "Times New Roman", Times, sans-serif;
-        background-color: white;
+        font-size: 16px;
+        background-color: #D8D4F2;
         margin: 0;
     }
     
     .header {
         background-color: white;
-        padding: 20px;
+        padding: 25px;
         text-align: center;
     }
     
     .navbar {
         overflow: hidden;
-        background-color: #931621;
+        background-color: #5B5B5B;
+        font-size: 18px;
+        color: white;
     }
     
     .navbar a {
         float: left;
         display: block;
-        font-size: 16px;
-        color: #f2f2f2;
+        font-size: 18px;
+        color: white;
         text-align: center;
-        padding: 14px 16px;
+        padding: 16px 16px;
         text-decoration: none;
     }
     
@@ -43,24 +46,24 @@
     }
 
     .dropdown .dropbtn {
-        font-size: 16px;
+        font-size: 18px;
         border: none;
         outline: none;
         color: white;
-        padding: 14px 16px;
-        background-color: #931621;
+        padding: 16px 16px;
+        background-color: #5B5B5B;
         margin: 0;
     }
 
     .navbar a:hover,
     .dropdown:hover .dropbtn {
-        background-color:#910D0D;
+        background-color:#C1C85D;
     }
     
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #931621;
+        background-color: #5B5B5B;
         min-width: 160px;
         z-index: 1;
     }
@@ -74,7 +77,7 @@
         text-align: left;
     }
     .dropdown-content a:hover {
-        background-color: #910D0D;
+        background-color: #C1C85D;
     }
 
     .dropdown:hover .dropdown-content {
@@ -88,57 +91,56 @@
     </style>
 
 
-    <body>
     <div class="header">
-    <head>
-    <style>
-    input[type=text] {
-    width: 50%;
-    box-sizing: border-box;
-    border: 2px solid #910D0D;
-    border-radius: 4px;
-    font: times new roman;
-    font-size: 20px;
-    background-color: white;
-    color: #000000;
-    padding: 12px 20px 12px 40px;
-    }
+        <head>
+            <style>
+            input[type=text] {
+            width: 50%;
+            box-sizing: border-box;
+            border: 2px solid #C1C85D;
+            border-radius: 4px;
+            font: times new roman;
+            font-size: 20px;
+            background-color: white;
+            color: #000000;
+            padding: 12px 20px 12px 40px;
+            }
     </style>
     </head>
     <body>
-            
-            <form>
-              <input type="text" name="search" placeholder="Search..">
-            </form>
-            </body>
-     </div>
+    <form>
+    <input type="text" name="search" placeholder="Search..">
+    </form>
+    </body>
+    </div>
     
-     <div class="navbar">
-            <a href="index.html" target="_self"> Home</a>
-            <a href="page2.html" target="_self"> Contacts</a>
-            <a href="page3.html" target="_self"> Correspondence</a>
-            <a href="page4.html" target="_self"> Documents</a>
-            <a href="page5.html" target="_self"> Expenses</a>
-            <a href="page6.html" target="_self"> Insurance</a>
-            <a href="page7.html" target="_self"> Liens/Subro</a>
-            <div class="dropdown">
-                <button class='dropbtn'>Litigation
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                        <a href="#">ASO/Calendar</a>    
-                        <a href="#">Depositions</a>
-                        <a href="#">Discovery</a>
-                        <a href="#">Mediation</a> 
-                </div>
-            </div>
-            <a href="page8.html" target="_self"> Medical</a>
-            <a href="page9.html" target="_self"> Notes</a>
-            <a href="page10.html" target="_self"> Settlement Calculator</a>
-           </div>
+    <div class="navbar">
+    <a href="index.html" target="_self"> Case</a>
+    <a href="page1.html" target="_self"> Contacts</a>
+    <a href="page2.html" target="_self"> Correspondence</a>
+    <a href="page3.html" target="_self"> Documents</a>
+    <a href="page4.html" target="_self"> Email</a>
+    <a href="page5.html" target="_self"> Expenses</a>
+    <a href="page6.html" target="_self"> Insurance</a>
+    <a href="page7.html" target="_self"> Liens/Subro</a>
+    <div class="dropdown">
+    <button class='dropbtn'>Litigation
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+            <a href="#">ASO/Calendar</a>    
+            <a href="#">Depositions</a>
+            <a href="#">Discovery</a>
+            <a href="#">Mediation</a> 
+    </div>
+    </div>
+    <a href="page8.html" target="_self"> Medical</a>
+    <a href="page9.html" target="_self"> Notes</a>
+    <a href="page10.html" target="_self"> Settlement Calculator</a>
+    </div>
+    <head>
+    <style>
 
-<head>
-<style>
 table {
     font-family: 'Times New Roman', Times, serif;
     color:#00111ace;
@@ -155,8 +157,12 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: white;
+    background-color: #F1F2EB;
     color:black; 
+}
+tr:nth-child(odd) {
+    background-color:white;
+    color:black;
 }
 </style>
 </head>
@@ -188,10 +194,10 @@ tr:nth-child(even) {
             <td></td>
             <td></td>
             <td>
-                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
+                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid #F1F2EB; background-color:#F1F2EB; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
             </td>
             <td>
-                <input type="text" id="claim" name="claim" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
+                <input type="text" id="claim" name="claim" placeholder="" style="width:200px; height:30px; border: 2px solid #F1F2EB; background-color: #F1F2EB; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
             </td>
             <td>
                 <select id="status" name="status" style="width:125px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
@@ -277,10 +283,10 @@ tr:nth-child(even) {
             <td></td>
             <td></td>
             <td>
-                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
+                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid #F1F2EB; background-color: #F1F2EB; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
             </td>
             <td>
-                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid white; background-color:white; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
+                <input type="text" id="policy" name="policy" placeholder="" style="width:200px; height:30px; border: 2px solid #F1F2EB; background-color: #F1F2EB; color:black; font-family:'Times New Roman', Times, serif; font-size:18px">
             </td>
             <td>
                 <select id="status" name="status" style="width:125px; height:30px; background-color:white; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">

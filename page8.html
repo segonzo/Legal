@@ -1,111 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>LAYOUT</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
   </head>
+  
+  <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Times New Roman", Times, sans-serif;
+            font-size:  16px;
+            background-color: #D8D4F2;
+            margin: 0;
+        }
+        
+        .header {
+            background-color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #5B5B5B;
+            font-size: 18 px; 
+            color: white;
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            font-size: 18px;
+            color: white;
+            text-align: center;
+            padding: 16px 16px;
+            text-decoration: none;
+        }
+        
+        .dropdown {
+            float:left;
+            overflow: hidden;
+        }
+    
+        .dropdown .dropbtn {
+            font-size: 18px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 16px 16px;
+            background-color: #5B5B5B;
+            margin: 0;
+        }
+    
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #C1C85D;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #5B5B5B;
+            min-width: 160px;
+            z-index: 1;
+        }
+            .dropdown-content a {
+            float:none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
 
-    <style>
-     * {
-        box-sizing: border-box;
-    }
+        .dropdown-content a:hover {
+            background-color: #C1C85D;
+        }
     
-    body {
-    font-family: "Times New Roman", Times, sans-serif;
-    background-color: white;
-    margin: 0;
-    }
-
-    table {
-    font-family: 'Times New Roman', Times, serif;
-    color:#701613;
-    font-size: 18px;
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 5%;
-    }
-    
-    td, th {
-        border: 1px solid #dddddd;
-        text-align: center;
-        padding: 15px;
-    }
-    
-    tr:nth-child(even) {
-        background-color: white;
-        color:black; 
-    }
-    
-    .header {
-        background-color: white;
-        padding: 20px;
-        text-align: center;
-    }
-    .navbar {
-        overflow: hidden;
-        background-color: #931621;
-    }
-    
-    .navbar a {
-        float: left;
-        display: block;
-        font-size: 16px;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    
-    .dropdown {
-        float:left;
-        overflow: hidden;
-    }
-
-    .dropdown .dropbtn {
-        font-size: 16px;
-        border: none;
-        outline: none;
-        color: white;
-        padding: 14px 16px;
-        background-color: #931621;
-        margin: 0;
-    }
-
-    .navbar a:hover,
-    .dropdown:hover .dropbtn {
-        background-color:#910D0D;
-    }
-    
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #931621;
-        min-width: 160px;
-        z-index: 1;
-    }
-
-    .dropdown-content a {
-        float:none;
-        color: white;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-    }
-    .dropdown-content a:hover {
-        background-color: #910D0D;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display:block;
-    }
-    /* Set a style for all buttons */
-    button {
+        .dropdown:hover .dropdown-content {
+            display:block;
+        }
+        /* Set a style for all buttons */
+        button {
         color:white;
         font-family:'Times New Roman', 'Times New Roman', Times, serif;
-    }
-    /* The Modal (background) */
+        }
+        table {
+            font: Times New Roman; 
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            text-align: left;
+            padding: 10px;
+            font-size: 20px;
+        }
+        tr:nth-child(odd) {
+            background-color:white; 
+        }
+        tr:nth-child(even) {
+            background-color:#F1F2EB;
+        }
+        /* The Modal (background) */
     .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -187,35 +184,35 @@
         opacity: 1;
         right: 0;
         }
-    </style>
-    
-    <div class="header">
-    <head>
-    <style>
-    input[type=text] {
-    width: 50%;
-    box-sizing: border-box;
-    border: 2px solid #910D0D;
-    border-radius: 4px;
-    font-size: 20px;
-    background-color: white;
-    color: #000000;
-    padding: 12px 20px 12px 40px;
-    }
-    </style>
-    </head>
-    <body>
-    <form>
-    <input type="text" name="search" placeholder="Search..">
-    </form>
-    </body>
-     </div>
-    
+        </style>
+   
+      <div class="header">
+        <head>
+        <style>
+        input[type=text] {
+        width: 50%;
+        box-sizing: border-box;
+        border: 2px solid #C1C85D;
+        border-radius: 4px;
+        font: times new roman;
+        font-size: 20px;
+        background-color: white;
+        color: #000000;
+        padding: 12px 20px 12px 40px;
+        }
+        </style>
+        </head>
+        <body>
+       <form><input type="text" name="search" placeholder="Search..">
+        </form></body>
+      </div>
+       
      <div class="navbar">
-            <a href="index.html" target="_self"> Home</a>
-            <a href="page2.html" target="_self"> Contacts</a>
-            <a href="page3.html" target="_self"> Correspondence</a>
-            <a href="page4.html" target="_self"> Documents</a>
+            <a href="index.html" target="_self"> Case</a>
+            <a href="page1.html" target="_self"> Contacts</a>
+            <a href="page2.html" target="_self"> Correspondence</a>
+            <a href="page3.html" target="_self"> Documents</a>
+            <a href="page4.html" target="_self"> Email</a>
             <a href="page5.html" target="_self"> Expenses</a>
             <a href="page6.html" target="_self"> Insurance</a>
             <a href="page7.html" target="_self"> Liens/Subro</a>
@@ -234,7 +231,8 @@
             <a href="page9.html" target="_self"> Notes</a>
             <a href="page10.html" target="_self"> Settlement Calculator</a>
            </div>
-           <body>
+    </style>
+    
                 
                 <table id="Medical Table">
                 <tr>
@@ -294,109 +292,6 @@
                 </tr>                    
                 </table>
 
-                <body>
-                <center>
-                <!-- Trigger/Open The Modal -->
-                <button id="myBtn" class="button" style="vertical-align:middle"><span> Add </span></button>
-                <button class="button" style="vertical-align:middle"><span>Delete </span></button>
-                </center>
-                        
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                <div class="modal-content">
-                <span class="close">&times;</span>
-                <div class="container">
-                <div class="header">
-                <center><h3>Medical Provider</h3>
-                <head>
-                <style>
-                input[type=text] {
-                box-sizing: border-box;
-                border: 1.5px solid #ddd;
-                border-radius: 2px;
-                font: times new roman;
-                font-size: 20px;
-                background-color: white;
-                color: #000000;
-                }
-                </style>
-                </head></center>
-                <body>
-                <form>
-                <input type="text" style="font-size:18px; font-family:'Times New Roman', Times, Serif" name="search" placeholder="Search...">
-                </form>
-                </body>
-                </div>                         
-                        <br>
-                         <label for="Name">Name:</label>
-                         <label for="Phone" style="margin-left:275px">Phone:</label>
-                         <br>
-                         <input type="text" style="font-size:18px; width: 290px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
-                         <input type="text" placeholder="(xxx)xxx-xxxx" style="font-size:18px; margin-left:28px; width: 160px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif"> 
-                         <br><br>
-                         <label for="Type">Type:</label>
-                         <label for="Phone" style="margin-left:280px">Fax:</label>
-                         <br>
-                         <select id="type" name="type" style="background-color:white; width: 290px; border: 1.5px solid #ddd; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px">
-                                                    <option value="blank"></option>
-                                                    <option value="">ER Physician</option>
-                                                    <option value="">EMS</option>
-                                                    <option value="">Hospital</option>
-                                                    <option value="">Orthopedic</option>
-                                                    <option value="">Physical Therapy</option>
-                                                    <option value="">Chiropractic</option>
-                                                    <option value="">Pain Management</option>
-                                                    <option value="">Neurology</option>
-                                                    <option value="">Psychological</option>
-                                                    <option value="">Other</select>
-                                                    
-            <input type="text" placeholder="(xxx)xxx-xxxx" style="font-size:18px; margin-left:28px; width: 160px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif"> 
-            <br><br>
-            <label for="Address">Address:</label>
-            <label for="Suite" style="margin-left:260px">Suite/Building</label>
-            <br>
-            <input type="text" style="font-size:18px; width: 290px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
-            <input type="text" style="font-size:18px; margin-left:28px; width: 160px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif"> 
-            <br><br>
-            <label for="Email" style="margin-left:320px"> Email:</label>
-            <br>
-            <input type="text" placeholder="City" style="font-size:18px; width: 110px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
-            <input type="text" placeholder="State" style="font-size:18px; width: 90px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
-            <input type="text" placeholder="Zip" style="font-size:18px; width: 80px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
-            <input type="text" style="font-size:18px; margin-left:28px; width: 160px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif"> 
-            <br><br>
-            <center>
-            <button style="color:white; border-radius: 12px;background-color: #00381F;border: none;text-align: center; font-size: 18px;padding: 6px;width: 150px;cursor: pointer;margin: 5px;">Add</button></center>
-            </div>
-            <body>
-                        
-                        <script>
-                        // Get the modal
-                        var modal = document.getElementById('myModal');
-                        
-                        // Get the button that opens the modal
-                        var btn = document.getElementById("myBtn");
-                        
-                        // Get the <span> element that closes the modal
-                        var span = document.getElementsByClassName("close")[0];
-                        
-                        // When the user clicks the button, open the modal 
-                        btn.onclick = function() {
-                          modal.style.display = "block";
-                        }
-                        
-                        // When the user clicks on <span> (x), close the modal
-                        span.onclick = function() {
-                          modal.style.display = "none";
-                        }
-                        
-                        // When the user clicks anywhere outside of the modal, close it
-                        window.onclick = function(event) {
-                          if (event.target == modal) {
-                            modal.style.display = "none";
-                          }
-                        }
-                        </script>
-
+ 
 
            </html>

@@ -1,0 +1,103 @@
+<body>
+        <center>
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn" class="button" style="vertical-align:middle"><span> Add </span></button>
+        <button class="button" style="vertical-align:middle"><span>Delete </span></button>
+        </center>
+                
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="container">
+        <div class="header">
+        <center><h3>Medical Provider</h3>
+        <head>
+        <style>
+        input[type=text] {
+        box-sizing: border-box;
+        border: 1.5px solid #ddd;
+        border-radius: 2px;
+        font: times new roman;
+        font-size: 20px;
+        background-color: white;
+        color: #000000;
+        }
+        </style>
+        </head></center>
+        <body>
+        <form>
+        <input type="text" style="font-size:18px; font-family:'Times New Roman', Times, Serif" name="search" placeholder="Search...">
+        </form>
+        </body>
+        </div>                         
+                <br>
+                 <label for="Name">Name:</label>
+                 <label for="Phone" style="margin-left:275px">Phone:</label>
+                 <br>
+                 <input type="text" style="font-size:18px; width: 290px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
+                 <input type="text" placeholder="(xxx)xxx-xxxx" style="font-size:18px; margin-left:28px; width: 160px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif"> 
+                 <br><br>
+                 <label for="Type">Type:</label>
+                 <label for="Phone" style="margin-left:280px">Fax:</label>
+                 <br>
+                 <select id="type" name="type" style="background-color:white; width: 290px; border: 1.5px solid #ddd; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px">
+                                            <option value="blank"></option>
+                                            <option value="">ER Physician</option>
+                                            <option value="">EMS</option>
+                                            <option value="">Hospital</option>
+                                            <option value="">Orthopedic</option>
+                                            <option value="">Physical Therapy</option>
+                                            <option value="">Chiropractic</option>
+                                            <option value="">Pain Management</option>
+                                            <option value="">Neurology</option>
+                                            <option value="">Psychological</option>
+                                            <option value="">Other</select>
+                                            
+    <input type="text" placeholder="(xxx)xxx-xxxx" style="font-size:18px; margin-left:28px; width: 160px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif"> 
+    <br><br>
+    <label for="Address">Address:</label>
+    <label for="Suite" style="margin-left:260px">Suite/Building</label>
+    <br>
+    <input type="text" style="font-size:18px; width: 290px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
+    <input type="text" style="font-size:18px; margin-left:28px; width: 160px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif"> 
+    <br><br>
+    <label for="Email" style="margin-left:320px"> Email:</label>
+    <br>
+    <input type="text" placeholder="City" style="font-size:18px; width: 110px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
+    <input type="text" placeholder="State" style="font-size:18px; width: 90px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
+    <input type="text" placeholder="Zip" style="font-size:18px; width: 80px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
+    <input type="text" style="font-size:18px; margin-left:28px; width: 160px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif"> 
+    <br><br>
+    <center>
+    <button style="color:white; border-radius: 12px;background-color: #00381F;border: none;text-align: center; font-size: 18px;padding: 6px;width: 150px;cursor: pointer;margin: 5px;">Add</button></center>
+    </div>
+    <body>
+                
+                <script>
+                // Get the modal
+                var modal = document.getElementById('myModal');
+                
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn");
+                
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+                
+                // When the user clicks the button, open the modal 
+                btn.onclick = function() {
+                  modal.style.display = "block";
+                }
+                
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                  modal.style.display = "none";
+                }
+                
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                  if (event.target == modal) {
+                    modal.style.display = "none";
+                  }
+                }
+                </script>

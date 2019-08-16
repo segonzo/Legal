@@ -4,31 +4,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
   </head>
-  
+
   <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
+    * {
+        box-sizing: border-box;
+    }
+    body {
             font-family: "Times New Roman", Times, sans-serif;
             font-size:  16px;
-            background-color: #F3FFBC;
+            background-color: #D8D4F2;
             margin: 0;
-        }
-        
-        .header {
-            background-color: white;
-            padding: 25px;
-            text-align: center;
-        }
-        .navbar {
+    }
+    
+    .header {
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .navbar {
             overflow: hidden;
-            background-color: #6BDBA7;
+            background-color: #5B5B5B;
             font-size: 18 px; 
             color: white;
-        }
-        
-        .navbar a {
+    }
+    
+    .navbar a {
             float: left;
             display: block;
             font-size: 18px;
@@ -36,581 +37,472 @@
             text-align: center;
             padding: 16px 16px;
             text-decoration: none;
-        }
-        
-        .dropdown {
-            float:left;
-            overflow: hidden;
-        }
+    }
     
-        .dropdown .dropbtn {
-            font-size: 18px;
-            border: none;
-            outline: none;
-            color: white;
-            padding: 16px 16px;
-            background-color: #6BDBA7;
-            margin: 0;
-        }
-    
-        .navbar a:hover,
-        .dropdown:hover .dropbtn {
-            background-color: #C1C85D;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #6BDBA7;
-            min-width: 160px;
-            z-index: 1;
-        }
-            .dropdown-content a {
-            float:none;
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
+    .dropdown {
+        float:left;
+        overflow: hidden;
+    }
 
-        .dropdown-content a:hover {
-            background-color: #C1C85D;
-        }
-    
-        .dropdown:hover .dropdown-content {
-            display:block;
-        }
+    .dropdown .dropbtn {
+        font-size: 18px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 16px 16px;
+        background-color: #5B5B5B;
+        margin: 0;
+    }
 
-        
-        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width:600px) {
-        .column {
-            width: 100%;
-        }
-        }
-        /* Set a style for all buttons */
-        button {
-        color:white;
-        font-family:'Times New Roman', 'Times New Roman', Times, serif;
-        }
-        /* Create two equal columns that floats next to each other */
-        .column {
-        float: left;
-        width: 50%;
-        padding: 20px;
-        }
-        /* Clear floats after the columns */
-        .row:after {
-        content: "";
-        display: table;
-        clear: both;
-        }
-        </style>
-   
-      <div class="header">
-        <head>
-        <style>
-        input[type=text] {
-        width: 50%;
-        box-sizing: border-box;
-        border: 2px solid #4D9DE0;
-        border-radius: 4px;
-        font: times new roman;
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+        background-color:#C1C85D;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #5B5B5B;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float:none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .dropdown-content a:hover {
+        background-color: #C1C85D;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display:block;
+    }
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: -10;
+        left: 0;
+        background-color: #5B5B5B;
+        font-family: "Times New Roman", Times, sans-serif;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 40px;
+    }
+                            
+    .sidebar a {
+        padding: 8px 8px 8px 8px;
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+                            
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        font-weight: bold;
+        color: #f1f1f1;
+    }
+
+    .closebtn:hover,
+    .close:focus {
+        color: white;
+        cursor: pointer;
+    }
+    .openbtn {
         font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+    }
+                            
+    .openbtn:hover {
+        background-color: #444;
+    }
+    #main {
+        transition: margin-right .5s;
+        padding: 16px;
+    }
+    
+    /* Set a style for all buttons */
+    button {
+    background-color: #C1C85D; 
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    float: center;
+    font-size: 16px;
+    border:none;
+    cursor: pointer;
+    padding: 14px 20px 15px 20px;
+    opacity: 0.9;
+    }
+        
+    /* Full-width input fields */
+    input[type=text] {
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0 22px 0; 
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    }
+    
+    /* Add padding to container elements */
+    .container {
+    padding: 16px;
+    }
+    
+    /* The Modal (background) */
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /*Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: #931621;
+    padding-top: 50px;
+    }
+    
+    /* Modal Content Box */
+    .modal-content {
+    background-color: #fefefe;
+    width: 40%;
+    height: 80%;
+    overflow: auto; /* Enable scroll if needed */
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    }
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+    } 
+    .table {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        border-collapse: collapse;
+        width: 200%;
+        margin-bottom: 5%;
+    }
+                            
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 18px;
+        height: 20px;
+        width: 225px;
+    }
+                            
+    tr:nth-child(even) {
         background-color: white;
-        color: #000000;
-        padding: 12px 20px 12px 40px;
-        }</head>
-        </style>
-        <body>
-       <form><input type="text" name="search" placeholder="Search..">
-        </form></body>
-      </div>
-       
-     <div class="navbar">
-            <a href="page1.html" target="_self"> Case</a>
-            <a href="page2.html" target="_self"> Contacts</a>
-            <a href="page3.html" target="_self"> Correspondence</a>
-            <a href="page4.html" target="_self"> Documents</a>
-            <a href="page5.html" target="_self"> Email</a>
-            <a href="page6.html" target="_self"> Expenses</a>
-            <a href="page7.html" target="_self"> Insurance</a>
-            <a href="page8.html" target="_self"> Liens/Subro</a>
-            <div class="dropdown">
-                <button class='dropbtn'>Litigation
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                        <a href="#">ASO/Calendar</a>    
-                        <a href="#">Depositions</a>
-                        <a href="#">Discovery</a>
-                        <a href="#">Mediation</a> 
-                </div>
-            </div>
-            <a href="page9.html" target="_self"> Medical</a>
-            <a href="page10.html" target="_self"> Notes</a>
-            <a href="page11.html" target="_self"> Settlement Calculator</a>
-           </div>
-    
-    <div class="row">
-    <div class="column">
-    <head>
-                    <style>
-                    
-                    label {
-                        padding: 4px 4px 4px 0;
-                        display: inline-block;
-                    }
-                    
-                   .container {
-                              border-radius: 5px;
-                              background-color: hsl(0, 0%, 100%);
-                              padding: 20px;
-                          }
-                       		.container input[type=text], select, textarea {
-                        	width: 100%;
-                        	padding: 4px;
-                        	border: 1px solid #ccc;
-                        	border-radius: 4px;
-                        	resize: vertical;
-                    	}
-                    
-                    .col-25 {
-                        float: left;
-                        width: 15%;
-                        margin-top: 6px;
-                        margin-right: 15px;
-                    }
-                    
-                    .col-50 {
-                        float: left;
-                        width: 20%;
-                        margin-top: 6px;
-                        margin-right: 15px;
-                    }
-
-                    .col-75 {
-                        float: left;
-                        width: 75%;
-                        margin-top: 6px;
-                        margin-right: 15px;
-                    }
-                    
-                    /* Clear floats after the columns */
-                    .row:after {
-                        content: "";
-                        display: table;
-                        clear: both;
-                    }
-                    
-                    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-                    @media screen and (max-width: 600px) {
-                        .col-25, .col-50, .col-75, input[type=submit] {
-                            width: 100%;
-                            margin-top: 20;
-                        }
-                    }
-                    </style>
-                    </head>
-                
-                    
-                    <div class="container">
-                    <form action="/action_page.php">
-                            <div class="row">
-                            <div class="col-25">
-                            <label for="fname">First Name</label>
-                            </div>
-                            <div class="col-75">
-                            <input type="text" id="fname" name="fname">
-                            </div>
-                            </div>
-
-                            <div class="row">
-                            <div class="col-25">
-                            <label for="lname">Last Name</label>
-                            </div>
-                            <div class="col-75">
-                            <input type="text" id="lname" name="lname">
-                            </div>
-                            </div>
-                        
-                            <div class="row">
-                            <div class="col-25">
-                            <label for="Email">Email</label>
-                            </div>
-                            <div class="col-75">
-                            <input type="text" id="Email" name="Email">
-                            </div> 
-                            </div>
-
-                            <div class="row">
-                            <div class="col-25">
-                            <label for="Address">Address</label>
-                            </div>
-                            <div class="col-75">
-                            <input type="text" id="Address" name="Address">
-                            </div>
-                            </div>
+        color:black; 
+        width:125px;
+    }
                             
-                            <div class="row">
-                            <div class="col-25">
-                            <label for="Street2">Street #2</label>
-                            </div>
-                            <div class="col-75">
-                            <input type="text" id="Street2" name="Street2">
-                            </div>
-                            </div>
-                        
-                            <div class="row">
-                            <div class="col-25">
-                            <label for="City"></label>
-                            </div>
-                            <div class="col-50">
-                            <input type="text" id="City" name="City" placeholder="City">
-                            </div>
-                            <div class="col-50">
-                            <input type="text" id="State" name="State" placeholder="State">
-                            </div>
-                            <div class="col-50">
-                            <input type="text" id="Zip" name="Zip" placeholder="Zip Code">
-                            </div>
-                            </div>      
-                        
-                            <div class="row">
-                            <div class="col-25">
-                            <label for="Gender">Gender</label>
-                            </div>
-                            <div class="col-75">
-                            <select id="Gender" name="Gender">
-                                <option value="blank"></option>
-                                <option value="Female">Female</option>
-                                <option value="Male">Male</option>
-                            </select>
-                            </div>
-                            </div>
-                            
-                            <div class="row">
-                            <div class="col-25">
-                            <label for="Language">Language</label>
-                            </div>
-                            <div class="col-75">
-                            <select id="Language" name="Language">
-                                <option value="blank"></option>
-                                <option value="English">English</option>
-                                <option value="Spanish">Spanish</option>
-                                <option value="Other">Other</option>
-                            </select>
-                            </div>
-                            </div>
+    tr:nth-child(odd) {
+        background-color: white;
+        color: black;
+        width: 125px; 
+    }                  
+    </style>
 
-                            <div class="row">
-                            <div class="col-25">
-                            <label for="summary">Summary</label>
-                            </div>
-                            <div class="col-75">
-                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                            </div>
-                            </div>
-             				</div>
-                    		</body>
-   
-	</div>
-    <div class="row">
-    <div class="column">
+    <div class="header">
     <head>
-    					<style>
-                       
-                          label {
-                              padding: 4px 4px 4px 0;
-                              display: inline-block;
-                          }
-                          
-                          .container {
-                              border-radius: 5px;
-                              background-color: hsl(0, 0%, 100%);
-                              padding: 20px;
-                          }
-                       		.container input[type=text], select, textarea {
-                        	width: 100%;
-                        	padding: 4px;
-                        	border: 1px solid #ccc;
-                        	border-radius: 4px;
-                        	resize: vertical;
-                    	}
-                          
-                          .col-25 {
-                              float: left;
-                              width: 13%;
-                              margin-top: 6px;
-                          }
-                          .col-30 {
-                              float: left;
-                              width: 6%;
-                              margin-top: 6px;
-                          }
-                          .col-50 {
-                              float: left;
-                              width: 19%;
-                              margin-top: 6px;
-                              margin-right: 15px;
-                          }
-                          .col-75 {
-                              float: left;
-                              width: 75%;
-                              margin-top: 6px;
-                          }
-                          
-                          /* Clear floats after the columns */
-                          .row:after {
-                              content: "";
-                              display: table;
-                              clear: both;
-                          }
-                          
-                          /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-                          @media screen and (max-width: 600px) {
-                              .col-25, .col-75, input[type=submit] {
-                                  width: 100%;
-                                  margin-top: 0;
-                              }
-                          }
-                          </style>
-                          </head>
-                          <body>
-                          
-        <div class="container">
-        <form action="/action_page.php">
-        <div class="row">
-        <div class="col-25">
-        <label for="hphone">Home Phone</label>
-        </div>
-                <div class="col-75">
-                <input type="text" id="hphone" name="hphone" placeholder="(xxx)xxx-xxxx">
-                </div>
-                </div>
-      
-        <div class="row">
-        <div class="col-25">
-        <label for="cphone">Cell Phone</label>
-        </div>
-                <div class="col-75">
-                <input type="text" id="cphone" name="cphone" placeholder="(xxx)xxx-xxxx">
-                </div>
-                </div>
-                             
-        <div class="row">
-        <div class="col-25">
-        <label for="DOB">DOB</label>
-        </div>
-                <div class="col-50">
-                <input type="text" id="DOB" name="DOB" placeholder="00/00/0000">
-                </div>
-                                
-        <div class="row">
-        <div class="col-30">
-        <label for="DOD">DOD</label>
-        </div>
-                <div class="col-50">
-                <input type="text" id="DOD" name="DOD" placeholder="00/00/0000">
-                </div>  
-                                          
-        <div class="row">
-        <div class="col-30">
-        <label for="SSN">SSN</label>
-        </div>
-                <div class="col-50">
-                <input type="text" id="SSN" name="SSN" placeholder="xxx-xx-xxxx">
-                </div>     
-                                            
-        <div class="row">
-        <div class="col-25">
-        <label for="DOB">DOA</label>
-        </div>
-                <div class="col-50">
-                <input type="text" id="DOA" name="DOA" placeholder="00/00/0000">
-                </div>
-                                              
-        <div class="row">
-        <div class="col-30">
-        <label for="SOL">SOL</label>
-        </div>
-                <div class="col-50">
-                <input type="text" id="SOL" name="SOL" placeholder="00/00/0000">
-                </div>  
-                                                        
-        <div class="row">
-        <div class="col-30">
-        <label for="DOR">DOR</label>
-        </div>
-                <div class="col-50">
-                <input type="text" id="DOR" name="DOR" placeholder="00/00/0000">
-                </div>             
-                                              
-        <div class="row">
-        <div class="col-25">
-        <label for="Atty">Attorney 1</label>
-        </div>
-                <div class="col-75">
-                <select id="Atty" name="Atty" aria-placeholder="Attorney">
-                <option value="blank"></option>
-                <option value="Atty">Atty 1</option>
-                <option value="Atty">Atty 2</option>
-                <option value="Atty">Atty 3</option>
-                </select>
-                </div>
-                </div>
-
-
-        <div class="row">
-        <div class="col-25">
-        <label for="Atty">Attorney 2</label>
-        </div>
-                <div class="col-75">
-                <select id="Atty" name="Atty" aria-placeholder="Attorney">
-                <option value="blank"></option>
-                <option value="Atty">Atty 1</option>
-                <option value="Atty">Atty 2</option>
-                <option value="Atty">Atty 3</option>
-                </select>
-                </div>
-                </div>
-
-        <div class="row">
-        <div class="col-25">
-        <label for="Plgl">Paralegal 1</label>
-        </div>
-                <div class="col-75">
-                <select id="Plgl" name="Plgl" aria-placeholder="Attorney">
-                <option value="blank"></option>
-                <option value="Atty">Paralegal 1</option>
-                <option value="Atty">Paralegal 2</option>
-                <option value="Atty">Paralegal 3</option>
-                </select>
-                </div>
-                </div>
-
-        <div class="row">
-        <div class="col-25">
-        <label for="Plgl">Paralegal 2</label>
-        </div>
-                <div class="col-75">
-                <select id="Plgl2" name="Plgl2" aria-placeholder="Attorney">
-                <option value="blank"></option>
-                <option value="Atty">Paralegal 1</option>
-                <option value="Atty">Paralegal 2</option>
-                <option value="Atty">Paralegal 3</option>
-                </select>
-                </div>
-                </div>
-				
-                <br>
-                <br>
-                
-				<div class="row">
-                <div class="col-25">
-                <label for="Case Status">Case Status</label>
-                </div>
-                
-                <div class="col-75">
-                <select id="Case Status" name="Case Status">
-                <option value="blank"></option>
-                <option value="Treating">Treating</option>
-                <option value="Post-Treatment">Post-Treatment</option>
-                <option value="Demand Prep">Demand Prep</option>
-                <option value="Negotiationg">Negotiating</option>
-                <option value="Settled - Waiting on Funds"> Settled - Waiting on Funds</option>
-                <option value="Settled - Disbursing"> Settled - Disbursing</option>
-                <option value="Closed">Closed</option>
-                <option value="Referred Out">Referred Out</option>
-                <option value="Dropped">Dropped</option>
-                </select>
-                </div>
-                </div>
-                                
-                <div class="row">
-        		<div class="col-25">
-        		<label for="value">Valuation</label>
-        		</div>
-                <div class="col-75">
-                <input type="text" id="value" name="value" placeholder="">
-                </div>
-                </div>
-
-
-        <div class="row">
-        <div class="col-25">
-        <label for="Injuries">Injuries:</label>
-        </div>
-    
-                <div class="container">
-                <form>
-                <label class="checkbox-inline">
-                <input type="checkbox" value="">Shoulder(s)
-                </label>
-                <label class="checkbox-inline">
-                <input type="checkbox" value="">Arm(s)
-                </label>
-                <label class="checkbox-inline">
-                <input type="checkbox" value="">Leg(s)
-                </label>
-                <label class="checkbox-inline">
-                <input type="checkbox" value="">Knee(s)
-                </label>
-                <label class="checkbox-inline">
-                <input type="checkbox" value="">Neck
-                </label>
-                <label class="checkbox-inline">
-                <input type="checkbox" value="">Back
-                </label>
-                <label>
-                <label class="checkbox-inline">
-                <input type="checkbox" value="">Head 
-                </label>
-                </form>
-                </div>
-                                                                      
-    </div>
+    <style>
+    input[type=text] {
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid #C1C85D;
+    border-radius: 4px;
+    font: times new roman;
+    font-size: 20px;
+    background-color: white;
+    color: #000000;
+    padding: 12px 20px 12px 40px;
+    }
+    </style>
+    </head>
+    <body>
+    <form>
+    <input type="text" name="search" placeholder="Search..">
+    </form>
     </body>
-    </html>
+   </div>                    
+                            
+   <div class="navbar">
+    <a href="index.html" target="_self"> Case</a>
+    <a href="page1.html" target="_self"> Contacts</a>
+    <a href="page2.html" target="_self"> Correspondence</a>
+    <a href="page3.html" target="_self"> Documents</a>
+    <a href="page4.html" target="_self"> Email </a>
+    <a href="page5.html" target="_self"> Expenses</a>
+    <a href="page6.html" target="_self"> Insurance</a>
+    <a href="page7.html" target="_self"> Liens/Subro</a>
+    <div class="dropdown">
+        <button class='dropbtn'>Litigation
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+                <a href="#">ASO/Calendar</a>    
+                <a href="#">Depositions</a>
+                <a href="#">Discovery</a>
+                <a href="#">Mediation</a> 
+        </div>
+    </div>
+    <a href="page8.html" target="_self"> Medical</a>
+    <a href="page9.html" target="_self"> Notes</a>
+    <a href="page10.html" target="_self"> Settlement Calculator</a>
+   </div>
+   
+   <div id="mySidebar" class="sidebar">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#"><u>Contact Details</u></a>
+    <a href="#">Name</a>
+    <a href="#">Role</a>
+    <a href="#">Phone No.</a>
+    <a href="#">Fax No.</a>
+    <a href="#">Email</a>
+    <a href="#">Address</a>
+    <a href="#">Company</a>
+    </div>
 
+    <div id="main">
+    <table id="myTable">
+    <tr>
+    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+    <th onclick="sortTable(0)"></th>   
+    <th onclick="sortTable(1)">Last Name</th>
+    <th onclick="sortTable(2)">First Name</th>
+    <th onclick="sortTable(3)">Role</th>
+    <th onclick="sortTable(4)">Phone No.</th>
+    <th onclick="sortTable(5)">Fax No.</th>
+    <th onclick="sortTable(6)">Email</th>
+    </tr>
+    
+    <tr>
+    <td><input type="checkbox" name="chk"></td>
+    <td><button class="openbtn" style="background-color:white; color:black; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">Doe</button></td>
+    <td><button class="openbtn" style="background-color:white; color: black; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">Jane</button></td>            					
+    <td>Witness</td>
+    <td>(832)829-9034</td>
+    <td></td>
+    <td>jane.doe@gmail.com</td>
+    </tr>
+    <tr>
+    <td><input type="checkbox" name="chk"></td>
+    <td><button class="openbtn" style="background-color:white; color:black; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">Nixon</button></td>
+    <td><button class="openbtn" style="background-color:white; color: black; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">John</button></td>             
+    <td>Defendant</td>
+    <td>(832)638-3807</td>
+    <td></td>
+    <td>jfr.nixon@hotmail.com</td>
+    </tr>
+    <tr>
+    <td><input type="checkbox" name="chk"></td>
+    <td><button class="openbtn" style="background-color:white; color:black; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">Byerly</button></td>
+    <td><button class="openbtn" style="background-color:white; color: black; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:150px" onclick="openNav()">Elliot</button></td>             
+    <td>Plaintiff-Companion</td>
+    <td>(512)220-1800</td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><input type="checkbox" name="chk"></td>
+    <td><button class="openbtn" style="background-color:white; color:black; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:180px" onclick="openNav()">Morris</button></td>
+    <td><button class="openbtn" style="background-color:white; color:black; font-size: 16px; font-family: 'Times New Roman', Times, serif; width:150px" onclick="openNav()">Richard</button></td>             
+    <td>Adjuster</td>
+    <td>(800)531-8669</td>
+    <td>(214)871-5164</td>
+    <td>rich.morris@usaa.com</td>
+    </tr>
+    </table></div>
+   
+    
+    <button onclick="myFunction('')">Insert Existing</button>   
+    <button> Delete </button> 
+    <button onclick="document.getElementById('id01').style.display='block'"> New Contact</button>
+    <div id='id01' class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form class="modal-content" action="/action_page.php">
+	<div class="container">
+    <h2>New Contact</h2>
+    
+    <label for="Role">Role:</label><select id="status" name="status" style="width:200px; margin-right:15px; height:40px; background-color:white; border: 1.5px solid #ddd; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                            <option value="blank"></option>
+                            <option value="">Adjuster</option>
+                            <option value="">Defendant</option>
+                            <option value="">Expert</option>
+                            <option value="">Insurance Provider</option>
+                            <option value="">Medical Provider</option>
+                            <option value="">Plaintiff</option>
+                            <option value="">Plaintiff Companion</option>
+                            <option value="">Subrogation</option>
+                            <option value="">Witness</option>
+                            <option value="">Other</option>
+                            </select>
+                    
+                    <label for="Prefix">Prefix:</label><select id="status" name="status" style="width:60px; margin-right:10px; height:40px; background-color:white; border: 1.5px solid #ddd; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                            <option value="blank"></option>
+                            <option value="">Mr.</option>
+                            <option value="">Ms.</option>
+                            <option value="">Mrs.</option>
+                            <option value=""></select>
+    
+	                <label for="Role">Suffix:</label><select id="status" name="status" style="width:60px; margin-right:10px; height:40px; background-color:white; border: 1.5px solid #ddd; color:black; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                            <option value="blank"></option>
+                            <option value="">Dr.</option>
+                            <option value="">MD</option>
+                            <option value="">PA</option>
+                            <option value="">PT</select><br><br>
+                    <label for="FName" style="margin-right: right 10px;">First:</label>
+                    <input type="text" placeholder="" style="width:200px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+      
+                    <label for="LName">Last:</label>
+                    <input type="text" placeholder="" style="width:260px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;"> <br>
+       
+                    <label for="Phone">Phone No.:</label>
+                    <input type="text" placeholder="(xxx)xxx-xxxx" style="width:140px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">
 
+                    <label for="Ext">Ext:</label>
+                    <input type="text" placeholder="ext." style="width:75px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                        
+                    <label for="Fax">Fax No.:</label>
+                    <input type="text" placeholder="(xxx)xxx-xxxx" style="width:140px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">  
+                    <br>
 
+                    <label for="Email" style="margin-right:40px">Email:</label>
+                    <input type="text" style="font-size:18px; width: 550px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif" placeholder="">
+                    <br>  
+                    
+                    <label for="Company" style="margin-right:20px">Company:</label>
+                    <input type="text" style="font-size:18px; width: 550px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman, Times, Serif" placeholder="">
+                    <br>
+                    
+                    <label for="Address" style:"margin-right:15px">Address:</label>
+                    <input type="text" style:font-size:18px; width: 550px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif" placeholder="">
+                    <br>
+                    
+                    <label for="Street2">Address No. 2</label>
+                    <input type="text" style:font-size:18px; width: 550px; background-color:white; border: 1.5px solid #ddd; font-family:'Times New Roman', Times, Serif">
+                    
+                    <label for="City"></label>
+                    <input type="text" placeholder="City" style:"width:165px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">
 
+                    <label for="State"></label>
+                    <input type="text" placeholder="State" style:"width:165px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd;font-family: 'Times New Roman', Times, serif; font-size:18px;">
+                        
+                    <label for="Zip"></label>
+                    <input type="text" placeholder="Zip" style:"width:165px; height: 40px; color:black; background-color:white; border: 1.5px solid #ddd; font-family: 'Times New Roman', Times, serif; font-size:18px;">  
+                    <br>
+	<div class="clearfix"> 
+    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"> Cancel </button>
+    <button>Add Contact</button>
+    </div>
+    </div>
+    </form>
+    
+    <script>    
+    function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    }
+                            
+    function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    }
+ 
+    function sortTable(n) {
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.getElementById("myTable");
+    switching = true;
+        //Set the sorting direction to ascending:
+        dir = "asc"; 
+        /*Make a loop that will continue until no switching has been done:*/
+        while (switching) {
+        //start by saying: no switching is done:
+        switching = false;
+        rows = table.rows;
+        /*Loop through all table rows (except the first, which contains table headers):*/
+        for (i = 1; i < (rows.length - 1); i++) {
+        //start by saying there should be no switching:
+        shouldSwitch = false;
+        /*Get the two elements you want to compare, one from current row and one from the next:*/
+        x = rows[i].getElementsByTagName("TD")[n];
+        y = rows[i + 1].getElementsByTagName("TD")[n];
+        /*check if the two rows should switch place, based on the direction, asc or desc:*/
+        if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        //if so, mark as a switch and break the loop:
+        shouldSwitch= true;
+        break;
+        }
+        } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+        //if so, mark as a switch and break the loop:
+        shouldSwitch = true;
+        break;
+        }
+        }
+        }
+        if (shouldSwitch) {
+        /*If a switch has been marked, make the switch and mark that a switch has been done:*/
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+        //Each time a switch is done, increase this count by 1:
+        switchcount ++;      
+        } else {
+        /*If no switching has been done AND the direction is "asc", set the direction to "desc" and run the while loop again.*/
+        if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+        }
+        }
+        }
+        }
+ function myFunction() {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(5);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
+    var cell6 = row.insertCell(5);
+    var cell7 = row.insertCell(6);
+    cell1.innerHTML = ""
+    cell2.innerHTML = ""
+    cell3.innerHTML = ""
+    cell4.innerHTML = ""
+    cell5.innerHTML = ""
+    cell6.innerHTML = ""
+    cell7.innerHTML = ""
+    }
+ 
+ // Get the modal
+var modal = document.getElementById('id01');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+        </body>
+        </html>                 
